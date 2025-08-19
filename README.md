@@ -1,10 +1,6 @@
-# St James's Church, Biddenham WordPress SCSS
+# Biddenham Village website WordPress SCSS
 
-![St James's Church logo](assets/images/st-james-church-logo-black.webp)
-
-This folder contains the SCSS and CSS files used on the stjames child theme for the St James's Church website.
-
-The St James's Church website uses the free version of the [Astra](https://wpastra.com/) parent theme.
+This folder contains the SCSS and CSS files used to customise the biddenham.org.uk website.
 
 ## How to use
 
