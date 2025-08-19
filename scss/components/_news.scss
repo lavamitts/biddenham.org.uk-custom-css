@@ -1,0 +1,25 @@
+/* News */
+span.byline {
+    display: none;
+}
+
+.clear-both {
+    clear: both;
+    float: none;
+}
+
+/* In-page navigation / table of contents */
+ul.toc {
+    list-style-type: disc;
+    margin: 0px;
+}
+
+/* In-page anchor adjustment  */
+:root {
+    scroll-padding-top: 50px !important;
+}
+
+/* Display of links to news stories in categories */
+.well .card-body ul li a {
+    display: inline-block;
+}

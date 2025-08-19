@@ -1,0 +1,46 @@
+/* Peter's Picturehouse */
+body.page-id-4624 main.site-main,
+body.page-id-7637 main.site-main {
+    background-image: url("/wp-content/uploads/2025/06/picture-house-background.webp");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top left;
+}
+
+body.page-id-4624 div.entry-content,
+body.page-id-7637 div.entry-content {
+    margin: 6em 4em 2em 4em;
+}
+
+@media (max-width: 768px) {
+    body.page-id-4624 main.site-main,
+    body.page-id-7637 main.site-main {
+        background: none;
+    }
+    body.page-id-4624 div.entry-content,
+    body.page-id-7637 div.entry-content {
+        margin: auto;
+    }
+}
+
+/* IMDB badge for Peter's Picture House */
+div.imdb {
+    background-repeat: no-repeat;
+    background-size: 40px 20px;
+    padding-left: 50px;
+    padding-bottom: 3px;
+    background-image: url("/wp-content/uploads/2025/06/imdb.webp");
+}
+
+/* Custom imagery for small devices - Peter's picture house */
+@media (max-width: 768px) {
+    img.film-poster {
+        width: 30% !important;
+        height: auto !important;
+    }
+}
+@media (max-width: 540px) {
+    img.film-poster {
+        display: none;
+    }
+}

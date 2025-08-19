@@ -1,0 +1,29 @@
+/* Typography */
+h2,
+h3 {
+    padding-bottom: 0px !important;
+    margin-bottom: 0.5em !important;
+    margin-top: 1.5em;
+}
+
+/* Underlines on footers */
+footer a {
+    text-decoration: underline !important;
+}
+footer a:hover {
+    text-decoration: none !important;
+}
+
+/* Underlines on links */
+article.page a {
+    text-decoration: underline !important;
+}
+
+article.page a:hover {
+    text-decoration: none !important;
+}
+
+/* Captions */
+figcaption.wp-element-caption {
+    text-align: center !important;
+}

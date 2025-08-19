@@ -1,0 +1,35 @@
+/* Start bin days component */
+.bin-collection {
+    background-color: #f0f0f0;
+    /* padding: 0px 1em 1em 1em; */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bin-collection h2 {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+}
+
+.bin-results {
+    display: flex;
+    align-items: center;
+}
+
+#bin-image {
+    float: left;
+    max-width: 64px;
+    padding: 0px;
+    margin-right: 1em;
+}
+#next-event {
+    align-items: center;
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.clearer {
+    clear: both;
+}
+/* End bin days component */

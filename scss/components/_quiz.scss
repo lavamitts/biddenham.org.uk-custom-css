@@ -1,0 +1,144 @@
+/* Quiz flyer starts */
+div.quiz {
+    width: 100%;
+    aspect-ratio: 190 / 277;
+    position: relative;
+    background-image: url("https://biddenham.org.uk/wp-content/uploads/2025/06/quiz-flyer-background.webp");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top left;
+}
+
+.full-width {
+    width: 100%;
+}
+
+#quiz1 {
+    position: absolute;
+    top: 1%;
+}
+
+#quiz2 {
+    position: absolute;
+    top: 10%;
+}
+
+#quiz3 {
+    position: absolute;
+    top: 19%;
+}
+
+#quiz4 {
+    position: absolute;
+    top: 68%;
+}
+
+#quiz5 {
+    position: absolute;
+    top: 80%;
+}
+
+#quiz6 {
+    position: absolute;
+    top: 84%;
+}
+
+#quiz7 {
+    position: absolute;
+    top: 89%;
+}
+
+#quiz8 {
+    position: absolute;
+    top: 96%;
+}
+
+.centered {
+    text-align: center;
+}
+
+.glow-text {
+    padding: 0px !important;
+    margin: 0px !important;
+    color: white;
+    font-size: 2rem;
+    text-shadow:
+        0 0 8px #ff7fff,
+        0 0 16px #ff7fff,
+        0 0 24px #ff7fff;
+}
+
+.quiz-white {
+    padding: 0px !important;
+    margin: 0px !important;
+    color: white !important;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.quiz-medium {
+    line-height: 1em;
+}
+
+.quiz-large {
+    line-height: 1em;
+}
+
+.quiz-huge {
+    line-height: 1em;
+}
+
+/* Large devices  */
+@media (min-width: 1024px) {
+    .quiz-medium {
+        font-size: 2.5rem !important;
+    }
+    .quiz-large {
+        font-size: 2.7rem !important;
+    }
+    .quiz-huge {
+        font-size: 7.5rem !important;
+    }
+}
+
+/* Medium devices  */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .quiz-medium {
+        font-size: 1.2rem !important;
+    }
+    .quiz-large {
+        font-size: 2em !important;
+    }
+    .quiz-huge {
+        font-size: 4rem !important;
+    }
+}
+
+/* Small devices  */
+@media (min-width: 450px) and (max-width: 768px) {
+    .quiz-medium {
+        font-size: 0.8rem !important;
+    }
+    .quiz-large {
+        font-size: 1.2rem !important;
+    }
+    .quiz-huge {
+        font-size: 3.3rem !important;
+    }
+}
+
+/* Tiny devices  */
+@media (max-width: 449px) {
+    .quiz-medium {
+        font-size: 0.6rem !important;
+    }
+    .quiz-large {
+        font-size: 0.9rem !important;
+    }
+    .quiz-huge {
+        font-size: 2.4rem !important;
+    }
+}
+/* Quiz flyer ends */

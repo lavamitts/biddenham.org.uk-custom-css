@@ -1,0 +1,25 @@
+/* lists */
+article.page ul,
+article.page ol {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+article.page ul {
+    list-style-type: square;
+}
+
+article.page ul li,
+article.page ol li {
+    margin-left: 1em;
+    padding-left: 0px;
+    margin-bottom: 0.25em;
+}
+
+article.page ul li::marker {
+    color: #2868a8;
+}
+
+article.mb-5 footer {
+    display: none;
+}

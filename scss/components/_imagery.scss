@@ -1,0 +1,17 @@
+/* Rounded edges on imagery */
+img.rounded,
+img.card-img {
+    border-radius: 10px !important;
+}
+
+@media (max-width: 768px) {
+    img.rounded,
+    img.card-img {
+        border-radius: 0 !important;
+    }
+}
+
+/* Galleries */
+.section--galleries .gallery-title {
+    padding-bottom: 1em !important;
+}

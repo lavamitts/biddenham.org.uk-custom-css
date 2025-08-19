@@ -1,0 +1,66 @@
+/* Back button on events */
+.tribe-events-back a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Standardise fonts on events */
+div#tribe-events-content h1.tribe-events-single-event-title {
+    font-family: "Source Sans Pro";
+}
+
+div#tribe-events-content div,
+div#tribe-events-content p {
+    font-family: "Source Sans Pro";
+}
+
+/* Icons for events */
+div.tribe-events-schedule .tribe-event-date-start {
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    padding-left: 30px;
+    padding-bottom: 3px;
+    background-image: url("/wp-content/uploads/2025/06/date-icon.webp");
+}
+
+.tribe-events-cost {
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    padding-left: 30px;
+    padding-bottom: 3px;
+    background-image: url("/wp-content/uploads/2025/06/price-icon.webp");
+}
+
+.ecs-event-list .ecs-event a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Start home page event list */
+ul.ecs-event-list {
+    padding-left: 1em;
+}
+
+ul.ecs-event-list li.ecs-event {
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+    margin-bottom: 1em;
+}
+
+ul.ecs-event-list li.ecs-event h4,
+ul.ecs-event-list li.ecs-event a {
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+ul.ecs-event-list li.ecs-event h4 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+ul.ecs-event-list li.ecs-event .duration.time {
+    color: antiquewhite;
+}
+/* End home page event list */

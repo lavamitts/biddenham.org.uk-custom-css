@@ -1,0 +1,18 @@
+/* Hide the telephone number */
+div.top-bar {
+    display: none !important;
+}
+
+/* Hide the copyright */
+div.footer-copyrights {
+    display: none !important;
+}
+
+/* Link to Biddenham new Parish Council website */
+.new-biddenham-pc-website {
+    padding: 1em 1em 0.25px 1em;
+    margin: 0px 0px 1em 0px;
+    border-radius: 5px;
+    background-color: #f0f1f2;
+    border: 0.5px #999 solid;
+}

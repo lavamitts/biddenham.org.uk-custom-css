@@ -1,0 +1,57 @@
+// Start BCV content
+$border-radius: 10px;
+
+figure.conservation-volunteers {
+    table {
+        border: 0;
+        // box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+        // border-collapse: separate; /* Ensure shadows show properly */
+        // border-spacing: 0; /* Optional: remove spacing if needed */
+
+        thead,
+        tbody {
+            border: 0;
+        }
+
+        thead {
+            th:first-child {
+                border-top-left-radius: $border-radius;
+            }
+            th:last-child {
+                border-top-right-radius: $border-radius;
+            }
+        }
+
+        tbody {
+            tr:last-child {
+                td:first-child {
+                    border-bottom-left-radius: $border-radius;
+                }
+                td:last-child {
+                    border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+
+        tr {
+            th {
+                background-color: #a7c46d !important;
+                color: white !important;
+                font-weight: bold !important;
+            }
+
+            th,
+            td {
+                border: 0;
+                border-right: 1px #738f3a solid;
+                vertical-align: middle;
+            }
+
+            th:last-child,
+            td:last-child {
+                border-right: 0;
+            }
+        }
+    }
+}
+// End BCV content

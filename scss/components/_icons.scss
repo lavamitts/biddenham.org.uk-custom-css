@@ -1,0 +1,38 @@
+/* Contact icons */
+div.icon,
+p.icon {
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    padding-left: 30px;
+    margin-bottom: 0.5em;
+}
+
+div.website,
+p.website {
+    background-image: url("/wp-content/uploads/2025/06/web-icon.webp");
+}
+
+div.facebook,
+p.facebook {
+    background-image: url("/wp-content/uploads/2025/06/facebook-icon.webp");
+}
+
+div.email,
+p.email {
+    background-image: url("/wp-content/uploads/2025/06/mail-icon.webp");
+}
+
+div.phone,
+p.phone {
+    background-image: url("/wp-content/uploads/2025/06/phone-icon.webp");
+}
+
+div.person,
+p.person {
+    background-image: url("/wp-content/uploads/2025/06/person-icon.webp");
+}
+
+div.video,
+p.video {
+    background-image: url("/wp-content/uploads/2025/06/video-icon.webp");
+}

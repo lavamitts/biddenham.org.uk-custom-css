@@ -1,0 +1,72 @@
+@use "./variables" as v;
+
+// Hide the page title
+body.page-id-8836 {
+    .page-title-bar {
+        display: none;
+    }
+}
+
+.home-posts {
+    margin-left: 1rem !important;
+    padding-left: 0 !important;
+    list-style: square !important;
+
+    li {
+        padding-left: 1.5em; // This indents the text to clear the marker
+        margin-left: 0 !important;
+    }
+}
+
+.home-events {
+    margin-left: 1rem !important;
+    padding-left: 0 !important;
+    list-style: square !important;
+
+    li {
+        padding-left: 1.5em; // This indents the text to clear the marker
+        margin-left: 0 !important;
+
+        a {
+            color: v.$dark-blue !important;
+        }
+
+        span.duration {
+            font-size: 0.8rem;
+
+            em {
+                font-style: normal;
+            }
+        }
+
+        span.duration.time {
+            color: black !important;
+        }
+
+        span.duration.venue {
+            color: black !important;
+            // display: block;
+        }
+    }
+}
+
+div.standard-button {
+    a {
+        text-decoration: none !important;
+    }
+    a:hover {
+        color: white !important;
+        background-color: v.$rich-blue !important;
+    }
+}
+
+h1.welcome-heading {
+    background-color: v.$dark-blue;
+    color: white;
+    padding: 1vw !important;
+}
+
+p.welcome-paragraph {
+    padding-left: 1vw !important;
+    padding-right: 1vw !important;
+}
