@@ -564,3 +564,22 @@ p.welcome-paragraph {
   padding-left: 1vw !important;
   padding-right: 1vw !important;
 }
+
+figure.cricket table thead tr th {
+  background-color: #2868a8;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #2868a8 !important;
+}
+figure.cricket table tbody tr td {
+  text-align: left;
+  border: 1px solid #2868a8;
+  background-color: white;
+}
+figure.cricket table tbody tr:nth-child(even) td {
+  background: #f0f0f0;
+}
+figure.cricket table tbody tr:hover td {
+  background: #ededff;
+}

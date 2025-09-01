@@ -1,0 +1,38 @@
+@use "variables" as v;
+
+figure.cricket {
+    // max-width: 90% !important;
+    // width: 90% !important;
+    // display: none;
+
+    table {
+        thead {
+            tr {
+                th {
+                    background-color: v.$dark-blue;
+                    color: white;
+                    text-align: left;
+                    font-weight: bold;
+                    border: 1px solid v.$dark-blue !important;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    text-align: left;
+                    border: 1px solid v.$dark-blue;
+                    background-color: white;
+                }
+            }
+
+            tr:nth-child(even) td {
+                background: #f0f0f0;
+            }
+
+            tr:hover td {
+                background: #ededff;
+            }
+        }
+    }
+}
