@@ -1,3 +1,33 @@
+@use "variables" as v;
+
+section#tribe-events {
+    p,
+    div,
+    ul,
+    li,
+    ol {
+        font-size: 16px !important;
+        font-family: "Source Sans Pro";
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: "Source Sans Pro";
+        color: v.$dark-blue;
+    }
+
+    ul.tribe-events-meta-list {
+        padding-left: 0;
+        margin-left: 0;
+
+        li {
+            padding-left: 0;
+            margin-left: 0;
+        }
+    }
+}
 /* Back button on events */
 .tribe-events-back a {
     color: #ffffff !important;

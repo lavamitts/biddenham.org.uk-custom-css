@@ -65,6 +65,14 @@ figcaption.wp-element-caption {
   text-align: center !important;
 }
 
+.mt1 {
+  margin-top: 1rem;
+}
+
+.mb1 {
+  margin-bottom: 1rem;
+}
+
 /* Contact icons */
 div.icon,
 p.icon {
@@ -175,6 +183,30 @@ div.imdb {
     display: none;
   }
 }
+section#tribe-events p,
+section#tribe-events div,
+section#tribe-events ul,
+section#tribe-events li,
+section#tribe-events ol {
+  font-size: 16px !important;
+  font-family: "Source Sans Pro";
+}
+section#tribe-events h1,
+section#tribe-events h2,
+section#tribe-events h3,
+section#tribe-events h4 {
+  font-family: "Source Sans Pro";
+  color: #2868a8;
+}
+section#tribe-events ul.tribe-events-meta-list {
+  padding-left: 0;
+  margin-left: 0;
+}
+section#tribe-events ul.tribe-events-meta-list li {
+  padding-left: 0;
+  margin-left: 0;
+}
+
 /* Back button on events */
 .tribe-events-back a {
   color: #ffffff !important;
@@ -582,4 +614,39 @@ figure.cricket table tbody tr:nth-child(even) td {
 }
 figure.cricket table tbody tr:hover td {
   background: #ededff;
+}
+
+figure.biddenham-table table {
+  max-width: 960px;
+}
+figure.biddenham-table table thead,
+figure.biddenham-table table tbody,
+figure.biddenham-table table tfoot {
+  border: 0 !important;
+}
+figure.biddenham-table table tr th {
+  background-color: #2868a8;
+  padding: 0.5rem !important;
+  color: white !important;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+figure.biddenham-table table tr th:first-child {
+  border-top-left-radius: 5px;
+}
+figure.biddenham-table table tr th:last-child {
+  border-top-right-radius: 5px;
+}
+figure.biddenham-table table tr td {
+  background-color: white !important;
+  padding: 0.5rem !important;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0 !important;
+  border-bottom: 1px #2868a8 solid !important;
+}
+figure.biddenham-table table tr:hover td {
+  background-color: #f0f0f0 !important;
 }
