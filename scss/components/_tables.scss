@@ -1,0 +1,49 @@
+@use "variables" as v;
+
+$radius: 5px;
+
+figure.biddenham-table {
+    table {
+        max-width: 960px;
+
+        thead,
+        tbody,
+        tfoot {
+            border: 0 !important;
+        }
+        tr {
+            th {
+                background-color: v.$dark-blue;
+                padding: 0.5rem !important;
+                color: white !important;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                border-bottom: 0;
+            }
+
+            th:first-child {
+                border-top-left-radius: $radius;
+            }
+
+            th:last-child {
+                border-top-right-radius: $radius;
+            }
+
+            td {
+                background-color: white !important;
+                padding: 0.5rem !important;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0 !important;
+                border-bottom: 1px v.$dark-blue solid !important;
+            }
+        }
+
+        tr:hover {
+            td {
+                background-color: #f0f0f0 !important;
+            }
+        }
+    }
+}
