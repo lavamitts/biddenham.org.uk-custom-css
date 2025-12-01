@@ -1,0 +1,36 @@
+@use "variables" as v;
+
+// Begin Contact form CSS
+.form-contact {
+    margin-bottom: 1rem;
+    max-width: 800px;
+
+    .everest-forms {
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+        background-color: v.$silver;
+        border-radius: 5px;
+
+        .evf-submit-container {
+            // margin-left: 0px;
+            // padding-left: 0px;
+
+            button[type="submit"] {
+                background-color: v.$dark-blue !important;
+                color: white !important;
+                margin-left: 0px !important;
+            }
+            button:hover {
+                background-color: v.$rich-blue !important;
+                color: white !important;
+            }
+        }
+
+        input,
+        textarea,
+        label,
+        p {
+            font-size: 16px;
+        }
+    }
+}
+// End Contact form CSS
