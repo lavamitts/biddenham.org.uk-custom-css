@@ -10,6 +10,17 @@ section#tribe-events {
         font-family: "Source Sans Pro";
     }
 
+    a {
+        text-decoration: underline !important;
+        text-decoration-style: solid;
+        border-bottom: 0 !important;
+        color: v.$dark-blue;
+    }
+
+    a:hover {
+        color: v.$rich-blue;
+    }
+
     h1,
     h2,
     h3,
@@ -94,3 +105,16 @@ ul.ecs-event-list li.ecs-event .duration.time {
     color: antiquewhite;
 }
 /* End home page event list */
+
+/* Sets the details area a bit wider, and newlines for postcode and country */
+.tribe-events-event-meta {
+    width: 100% !important;
+
+    .tribe-postal-code {
+        display: block;
+    }
+
+    .tribe-country-name {
+        display: none;
+    }
+}
