@@ -191,6 +191,15 @@ section#tribe-events ol {
   font-size: 16px !important;
   font-family: "Source Sans Pro";
 }
+section#tribe-events a {
+  text-decoration: underline !important;
+  text-decoration-style: solid;
+  border-bottom: 0 !important;
+  color: #2868a8;
+}
+section#tribe-events a:hover {
+  color: #00b3e3;
+}
 section#tribe-events h1,
 section#tribe-events h2,
 section#tribe-events h3,
@@ -274,6 +283,17 @@ ul.ecs-event-list li.ecs-event .duration.time {
 }
 
 /* End home page event list */
+/* Sets the details area a bit wider, and newlines for postcode and country */
+.tribe-events-event-meta {
+  width: 100% !important;
+}
+.tribe-events-event-meta .tribe-postal-code {
+  display: block;
+}
+.tribe-events-event-meta .tribe-country-name {
+  display: none;
+}
+
 /* Sidebars */
 .well .card-body .widget-title {
   margin-top: 0px;
@@ -326,6 +346,25 @@ ul.toc {
 /* Display of links to news stories in categories */
 .well .card-body ul li a {
   display: inline-block;
+}
+
+/* Start - For the latest posts component / block */
+article.page .wp-block-latest-posts__list,
+article.page .wp-block-latest-posts {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+article.page .wp-block-latest-posts__list li,
+article.page .wp-block-latest-posts li {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* End - For the latest posts component / block */
+/* To get the date in a post list onto a new line */
+div.card-body .post-date {
+  display: block;
 }
 
 /* Quiz flyer starts */
@@ -650,3 +689,36 @@ figure.biddenham-table table tr td {
 figure.biddenham-table table tr:hover td {
   background-color: #f0f0f0 !important;
 }
+
+.form-contact {
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+.form-contact .everest-forms {
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+.form-contact .everest-forms .evf-submit-container button[type=submit] {
+  background-color: #2868a8 !important;
+  color: white !important;
+  margin-left: 0px !important;
+}
+.form-contact .everest-forms .evf-submit-container button:hover {
+  background-color: #00b3e3 !important;
+  color: white !important;
+}
+.form-contact .everest-forms input,
+.form-contact .everest-forms textarea,
+.form-contact .everest-forms label,
+.form-contact .everest-forms p {
+  font-size: 16px;
+}
+
+/* Begin menus */
+nav.primary-navigation ul li span {
+  font-family: "Source Sans Pro" !important;
+  font-weight: normal !important;
+}
+
+/* End menus */

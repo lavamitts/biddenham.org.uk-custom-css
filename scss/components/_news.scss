@@ -23,3 +23,27 @@ ul.toc {
 .well .card-body ul li a {
     display: inline-block;
 }
+
+/* Start - For the latest posts component / block */
+article.page {
+    .wp-block-latest-posts__list,
+    .wp-block-latest-posts {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+
+        li {
+            margin-left: 0 !important;
+            padding-left: 0 !important;
+            margin-bottom: 1rem !important;
+        }
+    }
+}
+
+/* End - For the latest posts component / block */
+
+/* To get the date in a post list onto a new line */
+div.card-body {
+    .post-date {
+        display: block;
+    }
+}
