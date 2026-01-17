@@ -727,3 +727,9 @@ nav.primary-navigation ul li span {
 }
 
 /* End menus */
+.roadworks-table th:nth-child(3),
+.roadworks-table td:nth-child(3),
+.roadworks-table th:nth-child(2),
+.roadworks-table td:nth-child(2) {
+  white-space: nowrap; /* Prevent wrapping */
+}
