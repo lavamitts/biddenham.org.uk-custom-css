@@ -531,7 +531,7 @@ div.quiz {
 
 #bin-image {
   float: left;
-  max-width: 64px;
+  max-width: 96px;
   padding: 0px;
   margin-right: 1em;
 }
@@ -732,4 +732,20 @@ nav.primary-navigation ul li span {
 .roadworks-table th:nth-child(2),
 .roadworks-table td:nth-child(2) {
   white-space: nowrap; /* Prevent wrapping */
+}
+
+.iframe-16x9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 9 / 16 = 0.5625 */
+  overflow: hidden;
+}
+
+.iframe-16x9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
