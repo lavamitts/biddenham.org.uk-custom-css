@@ -1,5 +1,8 @@
 @use "./variables" as v;
 
+$border-radius-normal: 5px;
+$border-radius-shallow: 3px;
+
 // Hide the page title
 body.page-id-8836 {
     .page-title-bar {
@@ -7,24 +10,129 @@ body.page-id-8836 {
     }
 }
 
-.home-posts {
-    margin-left: 1rem !important;
-    padding-left: 0 !important;
-    list-style: square !important;
+.welcome-carousel {
+    margin-bottom: 0 !important;
+    border-radius: 5px;
 
-    li {
-        padding-left: 1.5em; // This indents the text to clear the marker
-        margin-left: 0 !important;
+    figure,
+    img,
+    div {
+        border-radius: 5px;
     }
 }
 
-.home-events {
-    margin-left: 1rem !important;
-    padding-left: 0 !important;
-    list-style: square !important;
+.home-main-column {
+    background-color: v.$dark-blue-tint-50;
+    padding: 1rem;
+    border-radius: $border-radius-normal;
+    gap: 1rem;
+
+    h2,
+    h3 {
+        margin-top: 0px !important;
+        color: v.$dark-blue;
+    }
+
+    // Shrink the blue border at mid point
+    @media (max-width: v.$mid-breakpoint) {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    // Hide the blue border and compress the paddings for mobile devices
+    @media (max-width: v.$mobile-breakpoint2) {
+        padding: 0;
+        border-radius: 0px;
+        background: none;
+    }
+}
+
+/* Begin home page news */
+.home-news {
+    margin: 0px !important;
+    background-color: white;
+    padding: 1rem;
+    border-radius: $border-radius-normal;
+
+    @media (max-width: v.$mid-breakpoint) {
+        border-radius: $border-radius-shallow;
+    }
+
+    @media (max-width: v.$mobile-breakpoint2) {
+        padding: 0;
+        border-radius: 0px;
+    }
+
+    h2 {
+        background-image: url("/wp-content/uploads/2026/03/noun-news-7918447-306095.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 22px auto;
+        padding: 0px 0px 0px 30px;
+        margin: 0px;
+    }
+}
+
+.home-posts {
+    // margin-left: 1rem !important;
+    margin-left: 0 !important;
+    padding-left: auto !important;
+    list-style: none !important;
 
     li {
-        padding-left: 1.5em; // This indents the text to clear the marker
+        // padding-left: 1.8em !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    time {
+        font-size: 1rem !important;
+        color: v.$dark-grey;
+    }
+}
+/* End home page news */
+
+/* Begin home page events */
+.home-events {
+    margin-top: 1rem !important;
+    background-color: white;
+    padding: 1rem;
+    border-radius: $border-radius-normal;
+    list-style: square !important;
+
+    @media (max-width: v.$mid-breakpoint) {
+        border-radius: $border-radius-shallow;
+    }
+
+    @media (max-width: v.$mobile-breakpoint2) {
+        padding: 0;
+        border-radius: 0px;
+    }
+
+    h2 {
+        background-image: url("/wp-content/uploads/2026/03/noun-event-7463933-306095.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 22px auto;
+        padding: 0px 0px 0px 30px;
+        margin: 0px;
+    }
+
+    p,
+    ul,
+    li {
+        line-height: 1.7rem;
+    }
+
+    ul {
+        // margin-left: 1rem !important;
+        margin-left: 0 !important;
+        list-style: none !important;
+    }
+
+    li {
+        // padding-left: 1.5em; // This indents the text to clear the marker
+        padding-left: 1; // This indents the text to clear the marker
         margin-left: 0 !important;
 
         a {
@@ -32,7 +140,7 @@ body.page-id-8836 {
         }
 
         span.duration {
-            font-size: 0.8rem;
+            // font-size: 0.8rem;
 
             em {
                 font-style: normal;
@@ -49,10 +157,12 @@ body.page-id-8836 {
         }
     }
 }
+/* End home page events */
 
 div.standard-button {
     a {
         text-decoration: none !important;
+        font-size: 1rem !important;
     }
     a:hover {
         color: white !important;
@@ -63,10 +173,114 @@ div.standard-button {
 h1.welcome-heading {
     background-color: v.$dark-blue;
     color: white;
-    padding: 1vw !important;
+    border-radius: 5px;
+    padding: 1vw;
+
+    @media (max-width: v.$mid-breakpoint) {
+        color: v.$dark-blue !important;
+        background: none !important;
+        // text-align: center !important;
+        width: 100%;
+        padding: 0;
+    }
+
+    @media (max-width: v.$mobile-breakpoint2) {
+        text-align: center !important;
+    }
 }
 
 p.welcome-paragraph {
-    padding-left: 1vw !important;
-    padding-right: 1vw !important;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    @media (max-width: v.$mid-breakpoint) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @media (max-width: v.$mobile-breakpoint2) {
+        text-align: center !important;
+    }
+}
+
+/* Begin home page clubs and societies */
+.clubs-societies {
+    background-color: white;
+    padding: 1rem;
+    border-radius: $border-radius-normal;
+
+    h2 {
+        background-image: url("/wp-content/uploads/2026/03/noun-society-8238783-306095.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 22px auto;
+        padding: 0px 0px 0px 30px;
+        margin: 0px;
+    }
+
+    @media (max-width: v.$mid-breakpoint) {
+        border-radius: $border-radius-shallow;
+    }
+
+    @media (max-width: v.$mobile-breakpoint2) {
+        padding: 0;
+        border-radius: 0px;
+        margin-top: 1rem !important;
+    }
+}
+/* End home page clubs and societies */
+
+/* Start home galleries */
+.home-galleries {
+    background-color: v.$terrarial;
+    border-radius: $border-radius-normal;
+
+    h2,
+    p,
+    a {
+        color: white !important;
+        // font-size: 125%;
+    }
+
+    div.standard-button {
+        a {
+            color: v.$dark-blue !important;
+            background-color: white;
+        }
+        a:hover {
+            background-color: v.$dark-blue !important;
+            color: white !important;
+        }
+    }
+}
+/* End home galleries */
+
+/* Ensure the main container's columns stretch to the same height */
+.home-main-column.wp-block-columns {
+    align-items: stretch;
+}
+
+/* Column 1: Make it a flex container so its children can grow */
+.home-main-column > .wp-block-column:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the News and Events blocks grow to fill the available space */
+.home-news,
+.home-events {
+    flex-grow: 1;
+    /* This ensures they share the 'slack' equally */
+}
+
+/* Column 2: Ensure it also fills height if it ever becomes the shorter side */
+.home-main-column > .wp-block-column:last-child {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* If you have a specific wrapper in Column 2, make it grow */
+.home-main-column > .wp-block-column:last-child > * {
+    flex-grow: 1;
 }

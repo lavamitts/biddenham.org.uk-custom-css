@@ -130,8 +130,6 @@ article.page ul {
 
 article.page ul li,
 article.page ol li {
-  margin-left: 1em;
-  padding-left: 0px;
   margin-bottom: 0.25em;
 }
 
@@ -356,7 +354,6 @@ ul.toc {
 /* Start - For the latest posts component / block */
 article.page .wp-block-latest-posts__list,
 article.page .wp-block-latest-posts {
-  margin-left: 0 !important;
   padding-left: 0 !important;
 }
 article.page .wp-block-latest-posts__list li,
@@ -583,64 +580,6 @@ figure.conservation-volunteers table tr td:last-child {
   border-right: 0;
 }
 
-body.page-id-8836 .page-title-bar {
-  display: none;
-}
-
-.home-posts {
-  margin-left: 1rem !important;
-  padding-left: 0 !important;
-  list-style: square !important;
-}
-.home-posts li {
-  padding-left: 1.5em;
-  margin-left: 0 !important;
-}
-
-.home-events {
-  margin-left: 1rem !important;
-  padding-left: 0 !important;
-  list-style: square !important;
-}
-.home-events li {
-  padding-left: 1.5em;
-  margin-left: 0 !important;
-}
-.home-events li a {
-  color: #2868a8 !important;
-}
-.home-events li span.duration {
-  font-size: 0.8rem;
-}
-.home-events li span.duration em {
-  font-style: normal;
-}
-.home-events li span.duration.time {
-  color: black !important;
-}
-.home-events li span.duration.venue {
-  color: black !important;
-}
-
-div.standard-button a {
-  text-decoration: none !important;
-}
-div.standard-button a:hover {
-  color: white !important;
-  background-color: #00b3e3 !important;
-}
-
-h1.welcome-heading {
-  background-color: #2868a8;
-  color: white;
-  padding: 1vw !important;
-}
-
-p.welcome-paragraph {
-  padding-left: 1vw !important;
-  padding-right: 1vw !important;
-}
-
 figure.cricket table thead tr th {
   background-color: #2868a8;
   color: white;
@@ -732,4 +671,358 @@ nav.primary-navigation ul li span {
 .roadworks-table th:nth-child(2),
 .roadworks-table td:nth-child(2) {
   white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Begin custom card styling */
+.custom-card .wp-block-columns {
+  gap: 1rem !important;
+  align-items: flex-start;
+}
+
+.custom-card {
+  display: flex;
+  align-items: flex-start;
+}
+.custom-card .custom-card-image-column {
+  flex: 1 1 0% !important;
+  min-width: 0;
+}
+.custom-card .custom-card-image-column figure img {
+  border-radius: 10px;
+}
+@media (max-width: 992px) {
+  .custom-card .custom-card-image-column figure img {
+    border-radius: 5px;
+  }
+}
+.custom-card .custom-card-image-column figure img {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  backface-visibility: hidden;
+}
+@media (hover: hover) {
+  .custom-card .custom-card-image-column figure img:hover {
+    transform: scale(1.1);
+  }
+}
+.custom-card .custom-card-text-column {
+  flex: 2 1 0% !important;
+  min-width: 0;
+  padding-right: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+.custom-card .custom-card-text-column h3 {
+  color: #2868a8;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0.125rem !important;
+}
+@media (max-width: 992px) {
+  .custom-card .custom-card-text-column h3 {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+  }
+}
+.custom-card .custom-card-text-column p {
+  margin-bottom: 0.25rem;
+  padding-bottom: 0px;
+  line-height: 1.4rem !important;
+}
+@media (max-width: 992px) {
+  .custom-card .custom-card-text-column p {
+    line-height: 1.25rem !important;
+    font-size: 90%;
+  }
+}
+.custom-card .custom-card-text-column a {
+  color: #2868a8;
+}
+.custom-card .custom-card-text-column a:hover {
+  color: #762e4c !important;
+}
+
+/* End custom card styling */
+/* Begin full-width-breakout styles */
+.full-width-breakout {
+  background-color: #2868a8;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.full-width-breakout .inner-container-fix {
+  max-width: 992px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px; /* Optional: adds a safety gutter for mobile screens */
+  padding-right: 20px;
+}
+
+/* End full-width-breakout styles */
+body.page-id-8836 .page-title-bar {
+  display: none;
+}
+
+.welcome-carousel {
+  margin-bottom: 0 !important;
+  border-radius: 5px;
+}
+.welcome-carousel figure,
+.welcome-carousel img,
+.welcome-carousel div {
+  border-radius: 5px;
+}
+
+.home-main-column {
+  background-color: #93b3d3;
+  padding: 1rem;
+  border-radius: 5px;
+  gap: 1rem;
+}
+.home-main-column h2,
+.home-main-column h3 {
+  margin-top: 0px !important;
+  color: #2868a8;
+}
+@media (max-width: 992px) {
+  .home-main-column {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 782px) {
+  .home-main-column {
+    padding: 0;
+    border-radius: 0px;
+    background: none;
+  }
+}
+
+/* Begin home page news */
+.home-news {
+  margin: 0px !important;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+@media (max-width: 992px) {
+  .home-news {
+    border-radius: 3px;
+  }
+}
+@media (max-width: 782px) {
+  .home-news {
+    padding: 0;
+    border-radius: 0px;
+  }
+}
+.home-news h2 {
+  background-image: url("/wp-content/uploads/2026/03/noun-news-7918447-306095.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 22px auto;
+  padding: 0px 0px 0px 30px;
+  margin: 0px;
+}
+
+.home-posts {
+  margin-left: 0 !important;
+  padding-left: auto !important;
+  list-style: none !important;
+}
+.home-posts li {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+.home-posts time {
+  font-size: 1rem !important;
+  color: #333333;
+}
+
+/* End home page news */
+/* Begin home page events */
+.home-events {
+  margin-top: 1rem !important;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  list-style: square !important;
+}
+@media (max-width: 992px) {
+  .home-events {
+    border-radius: 3px;
+  }
+}
+@media (max-width: 782px) {
+  .home-events {
+    padding: 0;
+    border-radius: 0px;
+  }
+}
+.home-events h2 {
+  background-image: url("/wp-content/uploads/2026/03/noun-event-7463933-306095.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 22px auto;
+  padding: 0px 0px 0px 30px;
+  margin: 0px;
+}
+.home-events p,
+.home-events ul,
+.home-events li {
+  line-height: 1.7rem;
+}
+.home-events ul {
+  margin-left: 0 !important;
+  list-style: none !important;
+}
+.home-events li {
+  padding-left: 1;
+  margin-left: 0 !important;
+}
+.home-events li a {
+  color: #2868a8 !important;
+}
+.home-events li span.duration em {
+  font-style: normal;
+}
+.home-events li span.duration.time {
+  color: black !important;
+}
+.home-events li span.duration.venue {
+  color: black !important;
+}
+
+/* End home page events */
+div.standard-button a {
+  text-decoration: none !important;
+  font-size: 1rem !important;
+}
+div.standard-button a:hover {
+  color: white !important;
+  background-color: #00b3e3 !important;
+}
+
+h1.welcome-heading {
+  background-color: #2868a8;
+  color: white;
+  border-radius: 5px;
+  padding: 1vw;
+}
+@media (max-width: 992px) {
+  h1.welcome-heading {
+    color: #2868a8 !important;
+    background: none !important;
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 782px) {
+  h1.welcome-heading {
+    text-align: center !important;
+  }
+}
+
+p.welcome-paragraph {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+@media (max-width: 992px) {
+  p.welcome-paragraph {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 782px) {
+  p.welcome-paragraph {
+    text-align: center !important;
+  }
+}
+
+/* Begin home page clubs and societies */
+.clubs-societies {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.clubs-societies h2 {
+  background-image: url("/wp-content/uploads/2026/03/noun-society-8238783-306095.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 22px auto;
+  padding: 0px 0px 0px 30px;
+  margin: 0px;
+}
+@media (max-width: 992px) {
+  .clubs-societies {
+    border-radius: 3px;
+  }
+}
+@media (max-width: 782px) {
+  .clubs-societies {
+    padding: 0;
+    border-radius: 0px;
+    margin-top: 1rem !important;
+  }
+}
+
+/* End home page clubs and societies */
+/* Start home galleries */
+.home-galleries {
+  background-color: #dbd6b6;
+  border-radius: 5px;
+}
+.home-galleries h2,
+.home-galleries p,
+.home-galleries a {
+  color: white !important;
+}
+.home-galleries div.standard-button a {
+  color: #2868a8 !important;
+  background-color: white;
+}
+.home-galleries div.standard-button a:hover {
+  background-color: #2868a8 !important;
+  color: white !important;
+}
+
+/* End home galleries */
+/* Ensure the main container's columns stretch to the same height */
+.home-main-column.wp-block-columns {
+  align-items: stretch;
+}
+
+/* Column 1: Make it a flex container so its children can grow */
+.home-main-column > .wp-block-column:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make the News and Events blocks grow to fill the available space */
+.home-news,
+.home-events {
+  flex-grow: 1;
+  /* This ensures they share the 'slack' equally */
+}
+
+/* Column 2: Ensure it also fills height if it ever becomes the shorter side */
+.home-main-column > .wp-block-column:last-child {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* If you have a specific wrapper in Column 2, make it grow */
+.home-main-column > .wp-block-column:last-child > * {
+  flex-grow: 1;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .site-main .container,
+  .site-main .container-sm {
+    max-width: 100% !important;
+  }
 }

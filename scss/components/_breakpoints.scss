@@ -1,0 +1,14 @@
+@use "./variables" as v;
+
+$lower-snap-breakpoint: 576px;
+$upper-snap-breakpoint: 768px;
+
+@media (min-width: v.$lower-snap-breakpoint) and (max-width: v.$mid-breakpoint) {
+    .site-main {
+        .container,
+        .container-sm {
+            max-width: 100% !important;
+            // background-color: blue;
+        }
+    }
+}

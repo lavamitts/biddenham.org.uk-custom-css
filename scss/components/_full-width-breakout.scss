@@ -1,0 +1,23 @@
+@use "variables" as v;
+
+/* Begin full-width-breakout styles */
+
+.full-width-breakout {
+    background-color: v.$dark-blue;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    .inner-container-fix {
+        max-width: 992px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 20px; /* Optional: adds a safety gutter for mobile screens */
+        padding-right: 20px;
+    }
+}
+
+/* End full-width-breakout styles */
