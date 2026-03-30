@@ -235,6 +235,10 @@ p.welcome-paragraph {
     background-color: v.$terrarial;
     border-radius: $border-radius-normal;
 
+    .wp-block-cover {
+        border-radius: $border-radius-normal;
+    }
+
     h2,
     p,
     a {
@@ -283,4 +287,83 @@ p.welcome-paragraph {
 /* If you have a specific wrapper in Column 2, make it grow */
 .home-main-column > .wp-block-column:last-child > * {
     flex-grow: 1;
+}
+
+.home-services {
+    h2 {
+        // margin-top: 0px !important;
+        color: v.$dark-blue;
+    }
+    .bin-collection {
+        background-color: #fff;
+        border: 0;
+
+        h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // $lower-snap-breakpoint:
+
+    @media (max-width: v.$mobile-breakpoint2) and (min-width: v.$lower-snap-breakpoint) {
+        /* Set max size of images on services section in home page */
+        .wp-block-columns {
+            // background-color: red;
+            gap: 1em;
+            flex-wrap: nowrap !important;
+            flex-basis: unset !important;
+            flex-shrink: 0;
+            flex-grow: 0;
+            align-items: center !important;
+
+            .wp-block-column:nth-of-type(1) {
+                // background-color: black;
+                flex-basis: 25% !important;
+                align-items: center;
+            }
+            .wp-block-column:nth-of-type(2) {
+                // background-color: blueviolet;
+                flex-basis: 25% !important;
+            }
+            .wp-block-column:nth-of-type(3) {
+                background-color: antiquewhite;
+                flex-basis: 50% !important;
+            }
+
+            .bin-collection {
+                vertical-align: top;
+
+                .bin-results {
+                    align-items: start;
+                }
+
+                h2 {
+                    font-size: 16px;
+                    display: none;
+                }
+                #next-event {
+                    font-size: 14px;
+                    line-height: 1.2rem;
+                }
+            }
+        }
+    }
+    @media (max-width: v.$mobile-breakpoint2) {
+        /* Set max size of images on services section in home page */
+
+        h2 {
+            text-align: center;
+        }
+
+        figure,
+        img {
+            max-width: 150px !important;
+            margin: 0 auto;
+        }
+
+        .wp-block-columns {
+            align-items: center;
+        }
+    }
 }

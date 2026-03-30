@@ -9,9 +9,16 @@ $terrarial: #dbd6b6;
 $maroon: #762e4c;
 
 // Breakpoints
-// 992 is the go to mobile breakpoint
+$large-breakpoint: 1200px;
 $mobile-breakpoint: 800px;
 $mobile-breakpoint2: 782px;
 $mid-breakpoint: 992px;
 $lower-snap-breakpoint: 576px;
-// $upper-snap-breakpoint: 768px;
+
+// Pages
+$page-church: ".page-id-722";
+$page-bga: ".page-id-907";
+$page-cricket: ".page-id-917";
+$page-tennis: ".page-id-919";
+$page-picturehouse1: ".page-id-4624";
+$page-picturehouse2: ".page-id-7637";

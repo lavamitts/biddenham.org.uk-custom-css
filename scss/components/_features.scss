@@ -1,0 +1,130 @@
+/*
+    FEATURES
+*/
+@use "./variables" as v;
+
+/*
+
+    These classes are used for feature panels that link out to other areas / sites
+    such as is found on the BGA landing page
+*/
+.features {
+    align-items: center;
+    text-align: center;
+}
+
+/*
+    Feature page background image defaults
+*/
+body#{v.$page-bga},
+body#{v.$page-church},
+body#{v.$page-cricket},
+body#{v.$page-tennis},
+body#{v.$page-picturehouse1},
+body#{v.$page-picturehouse2} {
+    main.site-main {
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: top left;
+    }
+}
+/*
+    Feature page background image specifics
+*/
+
+// BGA background
+body#{v.$page-bga} {
+    main.site-main {
+        background-image: url("/wp-content/uploads/2026/03/bga-feature-backgound-scaled.webp");
+    }
+    div.entry-content {
+        margin: 6rem 6rem 2rem 6rem;
+
+        @media (min-width: v.$large-breakpoint) {
+            margin-top: 12rem;
+        }
+    }
+    .bga-logo {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// Tennis club background
+body#{v.$page-tennis} {
+    main.site-main {
+        background-image: url("/wp-content/uploads/2026/03/tennis-feature-backgound-scaled.webp");
+    }
+    div.entry-content {
+        margin: 8rem 6rem 2rem 6rem;
+
+        @media (min-width: v.$large-breakpoint) {
+            margin-top: 14rem;
+        }
+    }
+}
+
+// Church background
+body#{v.$page-church} {
+    main.site-main {
+        background-image: url("/wp-content/uploads/2026/03/church-feature-backgound-scaled.webp");
+    }
+    div.entry-content {
+        margin: 8rem 6rem 2rem 6rem;
+
+        @media (min-width: v.$large-breakpoint) {
+            margin-top: 14rem;
+        }
+    }
+}
+
+// Cricket club background
+body#{v.$page-cricket} {
+    main.site-main {
+        background-image: url("/wp-content/uploads/2026/03/cricket-feature-backgound-scaled.webp");
+    }
+    div.entry-content {
+        margin: 8rem 6rem 2rem 6rem;
+
+        @media (min-width: v.$large-breakpoint) {
+            margin-top: 14rem;
+        }
+    }
+}
+
+// Picture house background
+body#{v.$page-picturehouse1},
+body#{v.$page-picturehouse2} {
+    main.site-main {
+        background-image: url("/wp-content/uploads/2025/06/picture-house-background.webp");
+    }
+    div.entry-content {
+        margin: 6rem 6rem 2rem 6rem;
+
+        @media (min-width: v.$large-breakpoint) {
+            margin-top: 12rem;
+        }
+    }
+}
+
+/*
+    Remove the backgrounds from all feature pages when on small viewports
+    If adding a new one, add the variable first to variables.scss
+*/
+
+@media (max-width: v.$mobile-breakpoint2) {
+    body#{v.$page-bga},
+    body#{v.$page-church},
+    body#{v.$page-cricket},
+    body#{v.$page-tennis},
+    body#{v.$page-picturehouse1},
+    body#{v.$page-picturehouse2} {
+        main.site-main {
+            background: none;
+        }
+        div.entry-content {
+            margin: auto;
+        }
+    }
+}

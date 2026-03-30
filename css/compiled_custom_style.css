@@ -130,6 +130,7 @@ article.page ul {
 
 article.page ul li,
 article.page ol li {
+  margin-left: 1em;
   margin-bottom: 0.25em;
 }
 
@@ -142,29 +143,6 @@ article.mb-5 footer {
 }
 
 /* Peter's Picturehouse */
-body.page-id-4624 main.site-main,
-body.page-id-7637 main.site-main {
-  background-image: url("/wp-content/uploads/2025/06/picture-house-background.webp");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: top left;
-}
-
-body.page-id-4624 div.entry-content,
-body.page-id-7637 div.entry-content {
-  margin: 6em 4em 2em 4em;
-}
-
-@media (max-width: 768px) {
-  body.page-id-4624 main.site-main,
-  body.page-id-7637 main.site-main {
-    background: none;
-  }
-  body.page-id-4624 div.entry-content,
-  body.page-id-7637 div.entry-content {
-    margin: auto;
-  }
-}
 /* IMDB badge for Peter's Picture House */
 div.imdb {
   background-repeat: no-repeat;
@@ -975,6 +953,9 @@ p.welcome-paragraph {
   background-color: #dbd6b6;
   border-radius: 5px;
 }
+.home-galleries .wp-block-cover {
+  border-radius: 5px;
+}
 .home-galleries h2,
 .home-galleries p,
 .home-galleries a {
@@ -1020,9 +1001,195 @@ p.welcome-paragraph {
   flex-grow: 1;
 }
 
+.home-services h2 {
+  color: #2868a8;
+}
+.home-services .bin-collection {
+  background-color: #fff;
+  border: 0;
+}
+.home-services .bin-collection h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+@media (max-width: 782px) and (min-width: 576px) {
+  .home-services {
+    /* Set max size of images on services section in home page */
+  }
+  .home-services .wp-block-columns {
+    gap: 1em;
+    flex-wrap: nowrap !important;
+    flex-basis: unset !important;
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-items: center !important;
+  }
+  .home-services .wp-block-columns .wp-block-column:nth-of-type(1) {
+    flex-basis: 25% !important;
+    align-items: center;
+  }
+  .home-services .wp-block-columns .wp-block-column:nth-of-type(2) {
+    flex-basis: 25% !important;
+  }
+  .home-services .wp-block-columns .wp-block-column:nth-of-type(3) {
+    background-color: antiquewhite;
+    flex-basis: 50% !important;
+  }
+  .home-services .wp-block-columns .bin-collection {
+    vertical-align: top;
+  }
+  .home-services .wp-block-columns .bin-collection .bin-results {
+    align-items: start;
+  }
+  .home-services .wp-block-columns .bin-collection h2 {
+    font-size: 16px;
+    display: none;
+  }
+  .home-services .wp-block-columns .bin-collection #next-event {
+    font-size: 14px;
+    line-height: 1.2rem;
+  }
+}
+@media (max-width: 782px) {
+  .home-services {
+    /* Set max size of images on services section in home page */
+  }
+  .home-services h2 {
+    text-align: center;
+  }
+  .home-services figure,
+  .home-services img {
+    max-width: 150px !important;
+    margin: 0 auto;
+  }
+  .home-services .wp-block-columns {
+    align-items: center;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 992px) {
   .site-main .container,
   .site-main .container-sm {
     max-width: 100% !important;
+  }
+}
+/*
+    FEATURES
+*/
+/*
+
+    These classes are used for feature panels that link out to other areas / sites
+    such as is found on the BGA landing page
+*/
+.features {
+  align-items: center;
+  text-align: center;
+}
+
+/*
+    Feature page background image defaults
+*/
+body.page-id-907 main.site-main,
+body.page-id-722 main.site-main,
+body.page-id-917 main.site-main,
+body.page-id-919 main.site-main,
+body.page-id-4624 main.site-main,
+body.page-id-7637 main.site-main {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top left;
+}
+
+/*
+    Feature page background image specifics
+*/
+body.page-id-907 main.site-main {
+  background-image: url("/wp-content/uploads/2026/03/bga-feature-backgound-scaled.webp");
+}
+body.page-id-907 div.entry-content {
+  margin: 6rem 6rem 2rem 6rem;
+}
+@media (min-width: 1200px) {
+  body.page-id-907 div.entry-content {
+    margin-top: 12rem;
+  }
+}
+body.page-id-907 .bga-logo {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.page-id-919 main.site-main {
+  background-image: url("/wp-content/uploads/2026/03/tennis-feature-backgound-scaled.webp");
+}
+body.page-id-919 div.entry-content {
+  margin: 8rem 6rem 2rem 6rem;
+}
+@media (min-width: 1200px) {
+  body.page-id-919 div.entry-content {
+    margin-top: 14rem;
+  }
+}
+
+body.page-id-722 main.site-main {
+  background-image: url("/wp-content/uploads/2026/03/church-feature-backgound-scaled.webp");
+}
+body.page-id-722 div.entry-content {
+  margin: 8rem 6rem 2rem 6rem;
+}
+@media (min-width: 1200px) {
+  body.page-id-722 div.entry-content {
+    margin-top: 14rem;
+  }
+}
+
+body.page-id-917 main.site-main {
+  background-image: url("/wp-content/uploads/2026/03/cricket-feature-backgound-scaled.webp");
+}
+body.page-id-917 div.entry-content {
+  margin: 8rem 6rem 2rem 6rem;
+}
+@media (min-width: 1200px) {
+  body.page-id-917 div.entry-content {
+    margin-top: 14rem;
+  }
+}
+
+body.page-id-4624 main.site-main,
+body.page-id-7637 main.site-main {
+  background-image: url("/wp-content/uploads/2025/06/picture-house-background.webp");
+}
+body.page-id-4624 div.entry-content,
+body.page-id-7637 div.entry-content {
+  margin: 6rem 6rem 2rem 6rem;
+}
+@media (min-width: 1200px) {
+  body.page-id-4624 div.entry-content,
+  body.page-id-7637 div.entry-content {
+    margin-top: 12rem;
+  }
+}
+
+/*
+    Remove the backgrounds from all feature pages when on small viewports
+    If adding a new one, add the variable first to variables.scss
+*/
+@media (max-width: 782px) {
+  body.page-id-907 main.site-main,
+  body.page-id-722 main.site-main,
+  body.page-id-917 main.site-main,
+  body.page-id-919 main.site-main,
+  body.page-id-4624 main.site-main,
+  body.page-id-7637 main.site-main {
+    background: none;
+  }
+  body.page-id-907 div.entry-content,
+  body.page-id-722 div.entry-content,
+  body.page-id-917 div.entry-content,
+  body.page-id-919 div.entry-content,
+  body.page-id-4624 div.entry-content,
+  body.page-id-7637 div.entry-content {
+    margin: auto;
   }
 }
