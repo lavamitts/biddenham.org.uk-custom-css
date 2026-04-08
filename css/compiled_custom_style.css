@@ -1193,6 +1193,21 @@ body.page-id-7637 div.entry-content {
     margin: auto;
   }
 }
+.otd-main-container div.otd-card,
+.otd-main-container div.cal-card {
+  max-width: 992px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0 !important;
+}
+@media (max-width: 992px) {
+  .otd-main-container div.otd-card,
+  .otd-main-container div.cal-card {
+    max-width: 100%;
+  }
+}
+
 div.marquee-days {
   background-color: #f7f7f7;
   padding: 1rem;
@@ -1243,4 +1258,25 @@ div.cal-card div.otd-card-content .otd-date {
   padding-left: 30px;
   padding-bottom: 3px;
   background-image: url("/wp-content/uploads/2025/06/date-icon.webp");
+}
+
+.otd-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.otd-nav button {
+  border-radius: 5px;
+  background-color: #2868a8;
+  color: white;
+  border: 0px;
+  padding: 0.25rem 1rem;
+}
+.otd-nav button:hover {
+  background-color: #00b3e3;
+  border: 0px !important;
 }
