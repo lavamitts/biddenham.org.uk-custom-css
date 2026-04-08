@@ -6,13 +6,13 @@ This folder contains the SCSS and CSS files used to customise the biddenham.org.
 
 Form this folder, run one of these scripts:
 
-To generate a compressed version of the CSS (preferred) which watches as changes are made
-
-`sass --watch ./scss/style.scss:./css/compiled_custom_style.css --no-source-map --style=compressed`
-
-To generate an uncompressed version of the CSS (for testing) which watches as changes are made:
+To generate an uncompressed version of the CSS (preferred) which watches as changes are made:
 
 `sass --watch ./scss/style.scss:./css/compiled_custom_style.css --no-source-map --style=expanded`
+
+To generate a compressed version of the CSS (for testing) which watches as changes are made
+
+`sass --watch ./scss/style.scss:./css/compiled_custom_style.css --no-source-map --style=compressed`
 
 As a one-off CSS generation script, run this:
 
