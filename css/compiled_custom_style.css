@@ -1264,10 +1264,9 @@ div.cal-card div.otd-card-content .otd-date {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  flex-wrap: wrap;
 }
 .otd-nav button {
   border-radius: 5px;
@@ -1279,4 +1278,15 @@ div.cal-card div.otd-card-content .otd-date {
 .otd-nav button:hover {
   background-color: #00b3e3;
   border: 0px !important;
+}
+.otd-nav div {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .otd-nav div {
+    flex-basis: 100%;
+    margin-top: 0.5rem;
+  }
 }

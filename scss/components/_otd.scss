@@ -70,10 +70,9 @@ div.cal-card {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    flex-wrap: wrap; // Allows items to wrap to a new line
 
     button {
         border-radius: 5px;
@@ -81,15 +80,25 @@ div.cal-card {
         color: white;
         border: 0px;
         padding: 0.25rem 1rem;
-        // width: 8rem;
 
-        // @media (max-width: v.$mid-breakpoint) {
-        //     width: 6rem;
-        // }
+        &:hover {
+            background-color: v.$rich-blue;
+            border: 0px !important;
+        }
     }
 
-    button:hover {
-        background-color: v.$rich-blue;
-        border: 0px !important;
+    // Target the div containing the input and "Go" button
+    div {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    // Mobile specific adjustment
+    @media (max-width: 600px) {
+        div {
+            flex-basis: 100%; // Forces the div to take the full width
+            margin-top: 0.5rem;
+        }
     }
 }
