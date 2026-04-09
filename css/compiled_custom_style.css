@@ -144,7 +144,7 @@ article.mb-5 footer {
 
 /* Peter's Picturehouse */
 /* IMDB badge for Peter's Picture House */
-div.imdb {
+.imdb {
   background-repeat: no-repeat;
   background-size: 40px 20px;
   padding-left: 50px;
@@ -164,6 +164,48 @@ div.imdb {
     display: none;
   }
 }
+.has-js figure.film-table {
+  visibility: hidden;
+}
+.has-js .xpicture-house-columns {
+  visibility: hidden;
+}
+
+/* Starts content for the version that uses columns, not tables */
+.picture-house-columns {
+  padding: 0.75rem;
+  margin: 0px !important;
+}
+.picture-house-columns p {
+  margin-bottom: 0.5rem;
+}
+.picture-house-columns p:last-of-type {
+  margin-bottom: 0;
+}
+.picture-house-columns figure {
+  margin-bottom: 0;
+}
+.picture-house-columns figure img {
+  margin-bottom: 0;
+  border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .picture-house-columns figure img {
+    display: none;
+  }
+}
+
+/* Target odd-numbered items */
+.picture-house-columns:nth-child(odd) {
+  background-color: rgba(250, 235, 215, 0.25);
+}
+
+/* Target even-numbered items */
+.picture-house-columns:nth-child(even) {
+  background-color: rgba(250, 235, 215, 0.5);
+}
+
+/* Ends content for the version that uses columns, not tables */
 section#tribe-events p,
 section#tribe-events div,
 section#tribe-events ul,

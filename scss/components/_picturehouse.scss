@@ -1,6 +1,8 @@
+@use "./variables" as v;
+
 /* Peter's Picturehouse */
 /* IMDB badge for Peter's Picture House */
-div.imdb {
+.imdb {
     background-repeat: no-repeat;
     background-size: 40px 20px;
     padding-left: 50px;
@@ -20,3 +22,57 @@ div.imdb {
         display: none;
     }
 }
+
+.has-js {
+    figure.film-table {
+        visibility: hidden;
+    }
+
+    .xpicture-house-columns {
+        visibility: hidden;
+    }
+}
+
+/* Starts content for the version that uses columns, not tables */
+
+.picture-house-columns {
+    padding: 0.75rem;
+    margin: 0px !important;
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    figure {
+        margin-bottom: 0;
+        img {
+            margin-bottom: 0;
+            border-radius: 10px;
+        }
+
+        @media (max-width: v.$mobile-breakpoint) {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Target odd-numbered items */
+.picture-house-columns:nth-child(odd) {
+    // background-color: white;
+    background-color: rgba(250, 235, 215, 0.25);
+}
+
+/* Target even-numbered items */
+.picture-house-columns:nth-child(even) {
+    // background-color: #f0f0f0;
+    // background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 0.5);
+}
+
+/* Ends content for the version that uses columns, not tables */
