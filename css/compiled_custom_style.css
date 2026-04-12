@@ -18,12 +18,17 @@ div.footer-copyrights {
 }
 
 /* Rounded edges on imagery */
+figure.rounded img {
+  border-radius: 10px !important;
+}
+
 img.rounded,
 img.card-img {
   border-radius: 10px !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 782px) {
+  figure.rounded img,
   img.rounded,
   img.card-img {
     border-radius: 0 !important;
@@ -117,6 +122,11 @@ p.video {
   background-image: url("/wp-content/uploads/2025/06/video-icon.webp");
 }
 
+div.price,
+p.price {
+  background-image: url("/wp-content/uploads/2025/06/price-icon.webp");
+}
+
 /* lists */
 article.page ul,
 article.page ol {
@@ -189,7 +199,7 @@ article.mb-5 footer {
   margin-bottom: 0;
   border-radius: 10px;
 }
-@media (max-width: 800px) {
+@media (max-width: 782px) {
   .picture-house-columns figure img {
     display: none;
   }
