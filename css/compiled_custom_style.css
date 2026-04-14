@@ -1342,3 +1342,41 @@ div.cal-card div.otd-card-content .otd-date {
     margin-top: 0.5rem;
   }
 }
+
+iframe {
+  border: 4px #2868a8 solid;
+  border-radius: 5px;
+}
+
+.biddenham-image-text-pattern {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.biddenham-image-text-pattern .biddenham-image-text-pattern-image,
+.biddenham-image-text-pattern .biddenham-image-text-pattern-text {
+  padding: 0px;
+  margin: 0px;
+}
+.biddenham-image-text-pattern .biddenham-image-text-pattern-image figure,
+.biddenham-image-text-pattern .biddenham-image-text-pattern-text figure {
+  padding: 0px;
+  margin: 0px;
+}
+.biddenham-image-text-pattern .biddenham-image-text-pattern-image figure img,
+.biddenham-image-text-pattern .biddenham-image-text-pattern-text figure img {
+  padding: 0px;
+  margin: 0px;
+  border-radius: 5px;
+}
+@media (max-width: 782px) {
+  .biddenham-image-text-pattern {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+  }
+  .biddenham-image-text-pattern .biddenham-image-text-pattern-image {
+    display: none;
+  }
+}
