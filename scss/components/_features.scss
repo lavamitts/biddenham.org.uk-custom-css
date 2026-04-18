@@ -17,6 +17,7 @@
     Feature page background image defaults
 */
 body#{v.$page-bga},
+body#{v.$page-pond},
 body#{v.$page-church},
 body#{v.$page-cricket},
 body#{v.$page-tennis},
@@ -79,6 +80,20 @@ body#{v.$page-church} {
     }
 }
 
+// Pond background
+body#{v.$page-pond} {
+    main.site-main {
+        background-image: url("/wp-content/uploads/2026/04/pond-feature-background-scaled.webp");
+    }
+    div.entry-content {
+        margin: 8rem 6rem 2rem 6rem;
+
+        @media (min-width: v.$large-breakpoint) {
+            margin-top: 14rem;
+        }
+    }
+}
+
 // Cricket club background
 body#{v.$page-cricket} {
     main.site-main {
@@ -118,6 +133,7 @@ body#{v.$page-picturehouse2} {
     body#{v.$page-church},
     body#{v.$page-cricket},
     body#{v.$page-tennis},
+    body#{v.$page-pond},
     body#{v.$page-picturehouse1},
     body#{v.$page-picturehouse2} {
         main.site-main {

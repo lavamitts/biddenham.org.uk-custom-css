@@ -1,0 +1,86 @@
+@use "./variables" as v;
+
+/* Galleries */
+.section--galleries {
+    .card-columns {
+        width: 100%;
+        // background-color: antiquewhite;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem; /* Adjust spacing between cards here */
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+
+        img {
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+
+    .gallery-item {
+        .card-img-overlay {
+            white-space: normal;
+
+            h5 {
+                white-space: normal;
+            }
+        }
+
+        // .card-img-overlay:hover {
+        //     background-color: v.$dark-blue !important;
+        // }
+    }
+
+    .gallery-title {
+        padding-bottom: 1rem !important;
+    }
+
+    .gallery-title:hover {
+        color: v.$terrarial;
+        text-decoration: underline double white !important;
+    }
+}
+
+/* Base style: Mobile (1 per row) */
+.gallery-image-w-caption {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* Tablet: 2 per row (using 768px as a standard breakpoint) */
+@media (min-width: v.$mobile-breakpoint2) {
+    .gallery-image-w-caption {
+        /* Subtracting a bit of width to account for the gap */
+        flex: 0 0 calc(50% - 1.5rem);
+    }
+}
+
+/* Desktop: 3 per row (using 992px or 1200px) */
+@media (min-width: v.$mid-breakpoint) {
+    .gallery-image-w-caption {
+        flex: 0 0 calc(33.333% - 1.5rem);
+    }
+}
+
+/* Update the gallery overlay appearance */
+.nw-gallery-item-content,
+.nw-gallery-item-overlay {
+    /* Use your variable for the dark blue with alpha transparency */
+    background-color: rgba(0, 33, 71, 0.75) !important;
+
+    /* If you prefer to use your SCSS variable directly: */
+    /* background-color: scale-color(v.$dark-blue, $alpha: -25%) !important; */
+
+    /* Apply the border radius to match the images */
+    border-radius: 10px !important;
+
+    /* Ensure the overlay is contained within the rounded bounds */
+    overflow: hidden !important;
+}
+
+/* Sometimes the parent container also needs the radius to prevent clipping issues */
+.nw-gallery-item {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}

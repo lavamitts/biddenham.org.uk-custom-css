@@ -35,8 +35,69 @@ img.card-img {
   }
 }
 /* Galleries */
+.section--galleries .card-columns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Adjust spacing between cards here */
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+.section--galleries .card-columns img {
+  padding: 0px;
+  margin: 0px;
+}
+.section--galleries .gallery-item .card-img-overlay {
+  white-space: normal;
+}
+.section--galleries .gallery-item .card-img-overlay h5 {
+  white-space: normal;
+}
 .section--galleries .gallery-title {
-  padding-bottom: 1em !important;
+  padding-bottom: 1rem !important;
+}
+.section--galleries .gallery-title:hover {
+  color: #dbd6b6;
+  text-decoration: underline double white !important;
+}
+
+/* Base style: Mobile (1 per row) */
+.gallery-image-w-caption {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* Tablet: 2 per row (using 768px as a standard breakpoint) */
+@media (min-width: 782px) {
+  .gallery-image-w-caption {
+    /* Subtracting a bit of width to account for the gap */
+    flex: 0 0 calc(50% - 1.5rem);
+  }
+}
+/* Desktop: 3 per row (using 992px or 1200px) */
+@media (min-width: 992px) {
+  .gallery-image-w-caption {
+    flex: 0 0 calc(33.333% - 1.5rem);
+  }
+}
+/* Update the gallery overlay appearance */
+.nw-gallery-item-content,
+.nw-gallery-item-overlay {
+  /* Use your variable for the dark blue with alpha transparency */
+  background-color: rgba(0, 33, 71, 0.75) !important;
+  /* If you prefer to use your SCSS variable directly: */
+  /* background-color: scale-color(v.$dark-blue, $alpha: -25%) !important; */
+  /* Apply the border radius to match the images */
+  border-radius: 10px !important;
+  /* Ensure the overlay is contained within the rounded bounds */
+  overflow: hidden !important;
+}
+
+/* Sometimes the parent container also needs the radius to prevent clipping issues */
+.nw-gallery-item {
+  border-radius: 10px !important;
+  overflow: hidden !important;
 }
 
 /* Typography */
@@ -51,18 +112,43 @@ h3 {
 footer a {
   text-decoration: underline !important;
 }
-
 footer a:hover {
   text-decoration: none !important;
 }
 
-/* Underlines on links */
+.site-main .container a,
 article.page a {
-  text-decoration: underline !important;
+  text-decoration: underline solid currentColor !important;
 }
-
+.site-main .container a:hover,
 article.page a:hover {
-  text-decoration: none !important;
+  color: #cc3333;
+  text-decoration: underline double #cc3333 !important;
+}
+.site-main .container a[rel*=noopener]:not(:has(img))::after,
+.site-main .container a[target=_blank]:not(:has(img))::after,
+.site-main .container a[onclick]:not(:has(img))::after,
+article.page a[rel*=noopener]:not(:has(img))::after,
+article.page a[target=_blank]:not(:has(img))::after,
+article.page a[onclick]:not(:has(img))::after {
+  /* Create an empty box after the link */
+  content: "" !important;
+  display: inline-block !important;
+  /* Set the exact size you want the icon to be */
+  width: 16px !important;
+  height: 16px !important;
+  /* Spacing and alignment */
+  margin-left: 5px !important;
+  vertical-align: middle !important;
+  /* Apply the image as a background instead */
+  background-image: url("https://biddenham.org.uk/wp-content/uploads/2026/04/noun-new-window-6849609-306095.png") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  /* Positioned 1px higher than the vertical centre */
+  background-position: center calc(50% - 2px) !important;
+  /* Ensure it remains visible */
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Captions */
@@ -1142,6 +1228,7 @@ p.welcome-paragraph {
     Feature page background image defaults
 */
 body.page-id-907 main.site-main,
+body.page-id-750 main.site-main,
 body.page-id-722 main.site-main,
 body.page-id-917 main.site-main,
 body.page-id-919 main.site-main,
@@ -1196,6 +1283,18 @@ body.page-id-722 div.entry-content {
   }
 }
 
+body.page-id-750 main.site-main {
+  background-image: url("/wp-content/uploads/2026/04/pond-feature-background-scaled.webp");
+}
+body.page-id-750 div.entry-content {
+  margin: 8rem 6rem 2rem 6rem;
+}
+@media (min-width: 1200px) {
+  body.page-id-750 div.entry-content {
+    margin-top: 14rem;
+  }
+}
+
 body.page-id-917 main.site-main {
   background-image: url("/wp-content/uploads/2026/03/cricket-feature-backgound-scaled.webp");
 }
@@ -1232,6 +1331,7 @@ body.page-id-7637 div.entry-content {
   body.page-id-722 main.site-main,
   body.page-id-917 main.site-main,
   body.page-id-919 main.site-main,
+  body.page-id-750 main.site-main,
   body.page-id-4624 main.site-main,
   body.page-id-7637 main.site-main {
     background: none;
@@ -1240,6 +1340,7 @@ body.page-id-7637 div.entry-content {
   body.page-id-722 div.entry-content,
   body.page-id-917 div.entry-content,
   body.page-id-919 div.entry-content,
+  body.page-id-750 div.entry-content,
   body.page-id-4624 div.entry-content,
   body.page-id-7637 div.entry-content {
     margin: auto;
