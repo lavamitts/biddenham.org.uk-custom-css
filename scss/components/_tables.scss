@@ -47,3 +47,38 @@ figure.biddenham-table {
         }
     }
 }
+
+// Center, right, left and no break for table cells
+
+@for $i from 1 through 6 {
+    figure.wp-block-table.c#{$i} {
+        td:nth-child(#{$i}),
+        th:nth-child(#{$i}) {
+            text-align: center !important;
+        }
+    }
+
+    figure.wp-block-table.r#{$i} {
+        td:nth-child(#{$i}),
+        th:nth-child(#{$i}) {
+            text-align: right !important;
+        }
+    }
+
+    figure.wp-block-table.l#{$i} {
+        td:nth-child(#{$i}),
+        th:nth-child(#{$i}) {
+            text-align: left !important;
+        }
+    }
+
+    figure.wp-block-table.nw#{$i} {
+        td:nth-child(#{$i}),
+        th:nth-child(#{$i}) {
+            white-space: nowrap !important;
+        }
+    }
+}
+.x {
+    color: red;
+}

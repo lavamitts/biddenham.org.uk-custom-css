@@ -1,0 +1,104 @@
+@use "variables" as v;
+
+article.page {
+    .barn-columns {
+        background-color: #ee6764;
+        padding: 1rem 1rem 1rem 1rem !important;
+        border-radius: 1rem;
+
+        @media (max-width: v.$mobile-breakpoint2) {
+            background-image: url("/wp-content/uploads/2026/04/barn-rainbow-background.webp");
+            background-repeat: repeat-x;
+            background-position: bottom;
+            background-size: auto 20px;
+            padding-bottom: 2rem;
+        }
+
+        figure {
+            margin-top: 1em;
+            margin-bottom: 1em;
+
+            @media (max-width: v.$mid-breakpoint) {
+                margin-top: 0.25em;
+                margin-bottom: 0.25em;
+            }
+        }
+
+        .barn-column1 {
+            figure {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        div,
+        figure,
+        img {
+            padding: 0px !important;
+        }
+
+        h2,
+        h3,
+        a,
+        p,
+        ul,
+        li {
+            color: white;
+            font-size: 19px;
+
+            @media (max-width: v.$mid-breakpoint) {
+                font-size: 16px;
+            }
+        }
+
+        a:hover {
+            color: antiquewhite;
+            text-decoration: underline double antiquewhite !important;
+        }
+
+        ul,
+        li {
+            list-style: none !important;
+            text-align: center;
+        }
+    }
+
+    .barn-mobile-row {
+        img {
+            border-radius: 5px;
+        }
+    }
+}
+
+@media (max-width: v.$mobile-breakpoint2) {
+    .barn-columns {
+        .barn-column1 {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: v.$mobile-breakpoint2) {
+    .barn-mobile-row {
+        display: none !important;
+    }
+}
+
+.site-main .container,
+article.page {
+    .barn-columns {
+        // Add in opens new window icon, excluding links containing images
+        a[rel*="noopener"]:not(:has(img))::after,
+        a[target="_blank"]:not(:has(img))::after,
+        a[onclick]:not(:has(img))::after {
+            background-image: url("/wp-content/uploads/2026/04/noun-new-window-6849609-FFFFFF.png") !important;
+        }
+    }
+}
+
+.white-separator {
+    color: white;
+    height: 1px !important;
+    padding: 0;
+    border: 1px;
+}

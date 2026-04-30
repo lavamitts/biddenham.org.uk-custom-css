@@ -141,7 +141,7 @@ article.page a[onclick]:not(:has(img))::after {
   margin-left: 5px !important;
   vertical-align: middle !important;
   /* Apply the image as a background instead */
-  background-image: url("https://biddenham.org.uk/wp-content/uploads/2026/04/noun-new-window-6849609-306095.png") !important;
+  background-image: url("/wp-content/uploads/2026/04/noun-new-window-6849609-306095.png") !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
   /* Positioned 1px higher than the vertical centre */
@@ -748,6 +748,130 @@ figure.biddenham-table table tr td {
 }
 figure.biddenham-table table tr:hover td {
   background-color: #f0f0f0 !important;
+}
+
+figure.wp-block-table.c1 td:nth-child(1),
+figure.wp-block-table.c1 th:nth-child(1) {
+  text-align: center !important;
+}
+
+figure.wp-block-table.r1 td:nth-child(1),
+figure.wp-block-table.r1 th:nth-child(1) {
+  text-align: right !important;
+}
+
+figure.wp-block-table.l1 td:nth-child(1),
+figure.wp-block-table.l1 th:nth-child(1) {
+  text-align: left !important;
+}
+
+figure.wp-block-table.nw1 td:nth-child(1),
+figure.wp-block-table.nw1 th:nth-child(1) {
+  white-space: nowrap !important;
+}
+
+figure.wp-block-table.c2 td:nth-child(2),
+figure.wp-block-table.c2 th:nth-child(2) {
+  text-align: center !important;
+}
+
+figure.wp-block-table.r2 td:nth-child(2),
+figure.wp-block-table.r2 th:nth-child(2) {
+  text-align: right !important;
+}
+
+figure.wp-block-table.l2 td:nth-child(2),
+figure.wp-block-table.l2 th:nth-child(2) {
+  text-align: left !important;
+}
+
+figure.wp-block-table.nw2 td:nth-child(2),
+figure.wp-block-table.nw2 th:nth-child(2) {
+  white-space: nowrap !important;
+}
+
+figure.wp-block-table.c3 td:nth-child(3),
+figure.wp-block-table.c3 th:nth-child(3) {
+  text-align: center !important;
+}
+
+figure.wp-block-table.r3 td:nth-child(3),
+figure.wp-block-table.r3 th:nth-child(3) {
+  text-align: right !important;
+}
+
+figure.wp-block-table.l3 td:nth-child(3),
+figure.wp-block-table.l3 th:nth-child(3) {
+  text-align: left !important;
+}
+
+figure.wp-block-table.nw3 td:nth-child(3),
+figure.wp-block-table.nw3 th:nth-child(3) {
+  white-space: nowrap !important;
+}
+
+figure.wp-block-table.c4 td:nth-child(4),
+figure.wp-block-table.c4 th:nth-child(4) {
+  text-align: center !important;
+}
+
+figure.wp-block-table.r4 td:nth-child(4),
+figure.wp-block-table.r4 th:nth-child(4) {
+  text-align: right !important;
+}
+
+figure.wp-block-table.l4 td:nth-child(4),
+figure.wp-block-table.l4 th:nth-child(4) {
+  text-align: left !important;
+}
+
+figure.wp-block-table.nw4 td:nth-child(4),
+figure.wp-block-table.nw4 th:nth-child(4) {
+  white-space: nowrap !important;
+}
+
+figure.wp-block-table.c5 td:nth-child(5),
+figure.wp-block-table.c5 th:nth-child(5) {
+  text-align: center !important;
+}
+
+figure.wp-block-table.r5 td:nth-child(5),
+figure.wp-block-table.r5 th:nth-child(5) {
+  text-align: right !important;
+}
+
+figure.wp-block-table.l5 td:nth-child(5),
+figure.wp-block-table.l5 th:nth-child(5) {
+  text-align: left !important;
+}
+
+figure.wp-block-table.nw5 td:nth-child(5),
+figure.wp-block-table.nw5 th:nth-child(5) {
+  white-space: nowrap !important;
+}
+
+figure.wp-block-table.c6 td:nth-child(6),
+figure.wp-block-table.c6 th:nth-child(6) {
+  text-align: center !important;
+}
+
+figure.wp-block-table.r6 td:nth-child(6),
+figure.wp-block-table.r6 th:nth-child(6) {
+  text-align: right !important;
+}
+
+figure.wp-block-table.l6 td:nth-child(6),
+figure.wp-block-table.l6 th:nth-child(6) {
+  text-align: left !important;
+}
+
+figure.wp-block-table.nw6 td:nth-child(6),
+figure.wp-block-table.nw6 th:nth-child(6) {
+  white-space: nowrap !important;
+}
+
+.x {
+  color: red;
 }
 
 .form-contact {
@@ -1484,4 +1608,95 @@ iframe {
   .biddenham-image-text-pattern .biddenham-image-text-pattern-image {
     display: none;
   }
+}
+
+article.page .barn-columns {
+  background-color: #ee6764;
+  padding: 1rem 1rem 1rem 1rem !important;
+  border-radius: 1rem;
+}
+@media (max-width: 782px) {
+  article.page .barn-columns {
+    background-image: url("/wp-content/uploads/2026/04/barn-rainbow-background.webp");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: auto 20px;
+    padding-bottom: 2rem;
+  }
+}
+article.page .barn-columns figure {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+@media (max-width: 992px) {
+  article.page .barn-columns figure {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+}
+article.page .barn-columns .barn-column1 figure {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+article.page .barn-columns div,
+article.page .barn-columns figure,
+article.page .barn-columns img {
+  padding: 0px !important;
+}
+article.page .barn-columns h2,
+article.page .barn-columns h3,
+article.page .barn-columns a,
+article.page .barn-columns p,
+article.page .barn-columns ul,
+article.page .barn-columns li {
+  color: white;
+  font-size: 19px;
+}
+@media (max-width: 992px) {
+  article.page .barn-columns h2,
+  article.page .barn-columns h3,
+  article.page .barn-columns a,
+  article.page .barn-columns p,
+  article.page .barn-columns ul,
+  article.page .barn-columns li {
+    font-size: 16px;
+  }
+}
+article.page .barn-columns a:hover {
+  color: antiquewhite;
+  text-decoration: underline double antiquewhite !important;
+}
+article.page .barn-columns ul,
+article.page .barn-columns li {
+  list-style: none !important;
+  text-align: center;
+}
+article.page .barn-mobile-row img {
+  border-radius: 5px;
+}
+
+@media (max-width: 782px) {
+  .barn-columns .barn-column1 {
+    display: none;
+  }
+}
+@media (min-width: 782px) {
+  .barn-mobile-row {
+    display: none !important;
+  }
+}
+.site-main .container .barn-columns a[rel*=noopener]:not(:has(img))::after,
+.site-main .container .barn-columns a[target=_blank]:not(:has(img))::after,
+.site-main .container .barn-columns a[onclick]:not(:has(img))::after,
+article.page .barn-columns a[rel*=noopener]:not(:has(img))::after,
+article.page .barn-columns a[target=_blank]:not(:has(img))::after,
+article.page .barn-columns a[onclick]:not(:has(img))::after {
+  background-image: url("/wp-content/uploads/2026/04/noun-new-window-6849609-FFFFFF.png") !important;
+}
+
+.white-separator {
+  color: white;
+  height: 1px !important;
+  padding: 0;
+  border: 1px;
 }
