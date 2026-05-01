@@ -291,7 +291,6 @@ p.welcome-paragraph {
 
 .home-services {
     h2 {
-        // margin-top: 0px !important;
         color: v.$dark-blue;
     }
     .bin-collection {
@@ -304,10 +303,7 @@ p.welcome-paragraph {
         }
     }
 
-    // $lower-snap-breakpoint:
-
     @media (max-width: v.$mobile-breakpoint2) and (min-width: v.$lower-snap-breakpoint) {
-        /* Set max size of images on services section in home page */
         .wp-block-columns {
             // background-color: red;
             gap: 1em;
@@ -350,8 +346,6 @@ p.welcome-paragraph {
         }
     }
     @media (max-width: v.$mobile-breakpoint2) {
-        /* Set max size of images on services section in home page */
-
         h2 {
             text-align: center;
         }
