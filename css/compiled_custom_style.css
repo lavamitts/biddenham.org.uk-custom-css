@@ -164,6 +164,12 @@ figcaption.wp-element-caption {
   margin-bottom: 1rem;
 }
 
+.intro-text {
+  font-weight: bold;
+  font-size: 120%;
+  color: #2868a8;
+}
+
 /* Contact icons */
 div.icon,
 p.icon {
