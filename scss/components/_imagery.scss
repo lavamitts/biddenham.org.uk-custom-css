@@ -18,4 +18,19 @@ img.card-img {
     img.card-img {
         border-radius: 0 !important;
     }
+
+    div.wp-block-image.drop-on-mobile {
+        figure.alignright,
+        figure.alignleft,
+        figure {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            float: none;
+
+            // img {
+            //     display: none;
+            // }
+        }
+    }
 }

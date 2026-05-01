@@ -33,6 +33,14 @@ img.card-img {
   img.card-img {
     border-radius: 0 !important;
   }
+  div.wp-block-image.drop-on-mobile figure.alignright,
+  div.wp-block-image.drop-on-mobile figure.alignleft,
+  div.wp-block-image.drop-on-mobile figure {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
 }
 /* Galleries */
 .section--galleries .card-columns {
@@ -168,6 +176,11 @@ figcaption.wp-element-caption {
   font-weight: bold;
   font-size: 120%;
   color: #2868a8;
+}
+@media (max-width: 782px) {
+  .intro-text {
+    text-align: center;
+  }
 }
 
 /* Contact icons */

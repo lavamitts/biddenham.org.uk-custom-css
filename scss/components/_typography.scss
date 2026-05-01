@@ -79,4 +79,8 @@ figcaption.wp-element-caption {
     font-weight: bold;
     font-size: 120%;
     color: v.$dark-blue;
+
+    @media (max-width: v.$mobile-breakpoint2) {
+        text-align: center;
+    }
 }
