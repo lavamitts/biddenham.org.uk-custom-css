@@ -1,0 +1,99 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+$inner-padding-normal: 1rem;
+
+.full-width-cover {
+    // Force the container to 4:1 ratio
+    width: 100% !important;
+    max-width: 100% !important;
+    aspect-ratio: 1440 / 360 !important;
+
+    // WordPress often injects a min-height via inline styles; this kills it
+    min-height: 0 !important;
+    height: auto !important;
+
+    position: relative !important;
+    overflow: hidden;
+    display: block !important;
+    margin-bottom: 2rem;
+
+    // Ensure the background image fills the 4:1 box without cropping the sides excessively
+    img.wp-block-cover__image-background,
+    .wp-block-cover__background {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: 10px;
+    }
+
+    // The inner container needs to be a full-size overlay to allow absolute positioning of text
+    div.wp-block-cover__inner-container {
+        position: absolute !important;
+        top: $inner-padding-normal !important;
+        left: $inner-padding-normal !important;
+        right: $inner-padding-normal !important;
+        bottom: 0 !important;
+        margin: 0 !important;
+        width: calc(100% - (2 * $inner-padding-normal)) !important;
+        max-width: none !important;
+        z-index: 2 !important;
+
+        h2.cover-heading {
+            margin: 0 !important;
+            font-size: 1.5rem;
+            line-height: 1.2;
+            color: white;
+            font-weight: bold;
+            @include m.text-shadow;
+        }
+
+        p.cover-subheading {
+            margin: 1rem 0 1rem 0 !important;
+            font-size: 1.2rem;
+            line-height: 1.1;
+            color: white;
+            font-weight: bold;
+            @include m.text-shadow;
+        }
+
+        .cover-button {
+            a {
+                background-color: v.$dark-blue;
+                color: white;
+                text-decoration: none !important;
+                border-radius: 5px !important;
+                padding: 1.5vw !important;
+                border-top: 1px white solid;
+                border-left: 1px white solid;
+                border-right: 1px black solid;
+                border-bottom: 1px black solid;
+                // @include m.box-shadow;
+            }
+        }
+    }
+}
+
+@media (max-width: v.$mobile-breakpoint2) {
+    .full-width-cover {
+        // Force the container to 3:1 ratio
+        aspect-ratio: 1080 / 360 !important;
+
+        div.wp-block-cover__inner-container {
+            h2.cover-heading {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: v.$cover-breakpoint) {
+    .full-width-cover {
+        // Force the container to 3:2 ratio
+        aspect-ratio: 540 / 360 !important;
+    }
+}

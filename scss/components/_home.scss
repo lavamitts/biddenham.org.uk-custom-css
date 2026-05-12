@@ -90,6 +90,7 @@ body.page-id-8836 {
         color: v.$dark-grey;
     }
 }
+
 /* End home page news */
 
 /* Begin home page events */
@@ -341,6 +342,32 @@ p.welcome-paragraph {
                 #next-event {
                     font-size: 14px;
                     line-height: 1.2rem;
+                }
+            }
+        }
+    }
+    @media (max-width: v.$lower-snap-breakpoint) {
+        h2 {
+            text-align: center;
+        }
+        div.bin-collection {
+            margin-left: auto;
+            margin-right: auto;
+
+            div.bin-results {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                text-align: center;
+                width: 100%;
+
+                img#bin-image {
+                    float: none;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                }
+                div#next-event {
+                    float: none;
                 }
             }
         }

@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 /* Begin menus */
 nav.primary-navigation {
     ul {
@@ -10,3 +12,21 @@ nav.primary-navigation {
     }
 }
 /* End menus */
+
+/* Specials */
+
+li#menu-item-11764 {
+    a {
+        background-color: v.$hover;
+    }
+    a:hover {
+        background-color: v.$maroon;
+        color: white;
+
+        span {
+            color: white;
+        }
+    }
+}
+
+/* End specials */

@@ -1,0 +1,27 @@
+@use "./variables" as v;
+
+.golf-posts {
+    // margin-left: 1rem !important;
+    margin-left: 0 !important;
+    padding-left: auto !important;
+    list-style: none !important;
+
+    li {
+        // padding-left: 1.8em !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    time {
+        font-size: 1rem !important;
+        color: v.$dark-grey;
+    }
+}
+
+.golf-posts {
+    li {
+        a.wp-block-latest-posts__post-title {
+            font-weight: bold;
+        }
+    }
+}

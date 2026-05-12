@@ -76,7 +76,7 @@ img.card-img {
         .wp-block-latest-posts__featured-image {
             // Span both the title and date rows on the left
             grid-column: 1;
-            grid-row: 1 / span 2;
+            grid-row: 1 / span 3;
             margin: 0;
 
             img {
@@ -85,6 +85,7 @@ img.card-img {
                 height: auto;
                 aspect-ratio: 16 / 9;
                 object-fit: cover;
+                border-radius: 10px;
             }
         }
 
@@ -104,6 +105,23 @@ img.card-img {
             display: block;
             font-size: 0.9rem;
             color: #666;
+        }
+
+        /* Mobile specific styles */
+        @media (max-width: 767px) {
+            // Keep the 160px/1fr split for the top half
+            // but force the excerpt to a new full-width row
+            .wp-block-latest-posts__post-excerpt {
+                grid-column: 1 / span 2;
+                grid-row: 3;
+                margin-top: 15px;
+            }
+
+            // Adjust the image span if you want title/date
+            // to sit tighter next to it on small screens
+            .wp-block-latest-posts__featured-image {
+                grid-row: 1 / span 2;
+            }
         }
     }
 }
