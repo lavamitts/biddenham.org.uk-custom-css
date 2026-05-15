@@ -330,6 +330,21 @@ p.price {
   background-image: url("/wp-content/uploads/2025/06/price-icon.webp");
 }
 
+div.pdf,
+p.pdf {
+  background-image: url("/wp-content/uploads/2026/05/pdf-icon.webp");
+}
+
+div.star,
+p.star {
+  background-image: url("/wp-content/uploads/2026/05/star-icon.webp");
+}
+
+div.time,
+p.time {
+  background-image: url("/wp-content/uploads/2026/05/time-icon.webp");
+}
+
 /* lists */
 article.page ul,
 article.page ol {
@@ -419,6 +434,14 @@ article.mb-5 footer {
 }
 
 /* Ends content for the version that uses columns, not tables */
+div.tribe-block__event-price {
+  padding: 0 0 0 2rem !important;
+}
+
+.tribe-events-c-search__input-group {
+  margin-right: 0.5rem !important;
+}
+
 section#tribe-events p,
 section#tribe-events div,
 section#tribe-events ul,
