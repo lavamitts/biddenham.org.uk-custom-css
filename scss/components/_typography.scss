@@ -88,3 +88,13 @@ figcaption.wp-element-caption {
 p.dark-blue {
     color: v.$dark-blue;
 }
+
+blockquote.wp-block-quote {
+    background-color: v.$dark-blue-tint-10;
+    border-left: 3px v.$dark-blue solid;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+
+    p:last-of-type {
+        margin-bottom: 0 !important;
+    }
+}

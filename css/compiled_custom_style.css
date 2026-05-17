@@ -281,6 +281,15 @@ p.dark-blue {
   color: #2868a8;
 }
 
+blockquote.wp-block-quote {
+  background-color: #eaf0f6;
+  border-left: 3px #2868a8 solid;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+blockquote.wp-block-quote p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
 /* Contact icons */
 div.icon,
 p.icon {
