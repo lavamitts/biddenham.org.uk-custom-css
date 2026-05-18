@@ -18,83 +18,83 @@ div.footer-copyrights {
 }
 
 .mt-0_5 {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem !important;
 }
 
 .mb-0_5 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
 }
 
 .mt-1 {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 
 .mb-1 {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 
 .mt-1_5 {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem !important;
 }
 
 .mb-1_5 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .mt-2 {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 
 .mb-2 {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 .mt-2_5 {
-  margin-top: 2.5rem;
+  margin-top: 2.5rem !important;
 }
 
 .mb-2_5 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem !important;
 }
 
 .mt-3 {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
 }
 
 .mb-3 {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 
 .mt-3_5 {
-  margin-top: 3.5rem;
+  margin-top: 3.5rem !important;
 }
 
 .mb-3_5 {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3.5rem !important;
 }
 
 .mt-4 {
-  margin-top: 4rem;
+  margin-top: 4rem !important;
 }
 
 .mb-4 {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .mt-4_5 {
-  margin-top: 4.5rem;
+  margin-top: 4.5rem !important;
 }
 
 .mb-4_5 {
-  margin-bottom: 4.5rem;
+  margin-bottom: 4.5rem !important;
 }
 
 .mt-5 {
-  margin-top: 5rem;
+  margin-top: 5rem !important;
 }
 
 .mb-5 {
-  margin-bottom: 5rem;
+  margin-bottom: 5rem !important;
 }
 
 /* Rounded edges on imagery */
@@ -437,6 +437,11 @@ p.time {
 div.tools,
 p.tools {
   background-image: url("/wp-content/uploads/2026/05/tools-icon.webp");
+}
+
+div.map,
+p.map {
+  background-image: url("/wp-content/uploads/2026/05/map-icon.webp");
 }
 
 /* lists */

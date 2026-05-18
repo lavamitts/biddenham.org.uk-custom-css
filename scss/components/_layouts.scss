@@ -34,11 +34,11 @@ $i: $start;
     }
 
     .mt-#{$name} {
-        margin-top: #{$i}rem;
+        margin-top: #{$i}rem !important;
     }
 
     .mb-#{$name} {
-        margin-bottom: #{$i}rem;
+        margin-bottom: #{$i}rem !important;
     }
 
     $i: $i + $step;
