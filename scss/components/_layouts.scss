@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /* Hide the telephone number */
 div.top-bar {
     display: none !important;
@@ -15,4 +17,29 @@ div.footer-copyrights {
     border-radius: 5px;
     background-color: #f0f1f2;
     border: 0.5px #999 solid;
+}
+
+// Margin top and bottom in 0.5 rem increments
+$start: 0.5;
+$end: 5;
+$step: 0.5;
+
+$i: $start;
+
+@while $i <= $end {
+    $name: $i;
+    @if $i % 1 != 0 {
+        // Updated to use the math module
+        $name: #{math.floor($i)}_5;
+    }
+
+    .mt-#{$name} {
+        margin-top: #{$i}rem;
+    }
+
+    .mb-#{$name} {
+        margin-bottom: #{$i}rem;
+    }
+
+    $i: $i + $step;
 }
