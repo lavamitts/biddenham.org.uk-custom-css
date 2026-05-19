@@ -123,6 +123,12 @@ div.footer-copyrights {
   margin-bottom: 5rem !important;
 }
 
+@media (max-width: 782px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
 /* Rounded edges on imagery */
 figure.rounded img {
   border-radius: 10px !important;
@@ -758,6 +764,39 @@ div.card-body .post-date {
   display: block;
 }
 
+/*
+CSS to cater for removing featured images and bad excerpts
+
+- from a single post page
+- from the news / blog landing page
+*/
+.post-template-default article,
+.blog article,
+.archive.category article {
+  margin-bottom: 1rem !important;
+  padding-bottom: 0px !important;
+}
+.post-template-default article header.entry-header h2,
+.blog article header.entry-header h2,
+.archive.category article header.entry-header h2 {
+  border-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+.post-template-default article header.entry-header div.entry-meta,
+.blog article header.entry-header div.entry-meta,
+.archive.category article header.entry-header div.entry-meta {
+  padding: 0px !important;
+  margin: 1rem 0px !important;
+}
+.post-template-default article header.entry-header div.post-thumbnail img,
+.post-template-default article header.entry-header a img,
+.blog article header.entry-header div.post-thumbnail img,
+.blog article header.entry-header a img,
+.archive.category article header.entry-header div.post-thumbnail img,
+.archive.category article header.entry-header a img {
+  display: none !important;
+}
+
 /* Quiz flyer starts */
 div.quiz {
   width: 100%;
@@ -935,7 +974,6 @@ div.quiz {
 
 .home-services .bin-see-more {
   margin-top: 0.5rem;
-  text-align: center;
   display: block;
 }
 
@@ -1559,19 +1597,11 @@ p.welcome-paragraph {
   flex-grow: 1;
 }
 
-.home-services h2 {
+.xhome-services h2 {
   color: #2868a8;
 }
-.home-services .bin-collection {
-  background-color: #fff;
-  border: 0;
-}
-.home-services .bin-collection h2 {
-  color: #333;
-  margin-bottom: 1rem;
-}
 @media (max-width: 782px) and (min-width: 576px) {
-  .home-services .wp-block-columns {
+  .xhome-services .wp-block-columns {
     gap: 1em;
     flex-wrap: nowrap !important;
     flex-basis: unset !important;
@@ -1579,66 +1609,33 @@ p.welcome-paragraph {
     flex-grow: 0;
     align-items: center !important;
   }
-  .home-services .wp-block-columns .wp-block-column:nth-of-type(1) {
+  .xhome-services .wp-block-columns .wp-block-column:nth-of-type(1) {
     flex-basis: 25% !important;
     align-items: center;
   }
-  .home-services .wp-block-columns .wp-block-column:nth-of-type(2) {
+  .xhome-services .wp-block-columns .wp-block-column:nth-of-type(2) {
     flex-basis: 25% !important;
   }
-  .home-services .wp-block-columns .wp-block-column:nth-of-type(3) {
+  .xhome-services .wp-block-columns .wp-block-column:nth-of-type(3) {
     background-color: antiquewhite;
     flex-basis: 50% !important;
   }
-  .home-services .wp-block-columns .bin-collection {
-    vertical-align: top;
-  }
-  .home-services .wp-block-columns .bin-collection .bin-results {
-    align-items: start;
-  }
-  .home-services .wp-block-columns .bin-collection h2 {
-    font-size: 16px;
-    display: none;
-  }
-  .home-services .wp-block-columns .bin-collection #next-event {
-    font-size: 14px;
-    line-height: 1.2rem;
-  }
 }
 @media (max-width: 576px) {
-  .home-services h2 {
+  .xhome-services h2 {
     text-align: center;
-  }
-  .home-services div.bin-collection {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .home-services div.bin-collection div.bin-results {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-  .home-services div.bin-collection div.bin-results img#bin-image {
-    float: none;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  .home-services div.bin-collection div.bin-results div#next-event {
-    float: none;
   }
 }
 @media (max-width: 782px) {
-  .home-services h2 {
+  .xhome-services h2 {
     text-align: center;
   }
-  .home-services figure,
-  .home-services img {
+  .xhome-services figure,
+  .xhome-services img {
     max-width: 150px !important;
     margin: 0 auto;
   }
-  .home-services .wp-block-columns {
+  .xhome-services .wp-block-columns {
     align-items: center;
   }
 }
@@ -1772,10 +1769,15 @@ ul.wp-block-latest-posts.home-gem-posts li:nth-child(n+4) {
   text-align: center;
   flex-shrink: 0; /* Prevents the icon from squishing */
 }
-@media (max-width: 767px) {
-  .home-gem-events-inner ul.ecs-event-list .cal-iconx {
-    display: none;
-  }
+.home-gem-events-inner ul.ecs-event-list .cal-icon.cal-icon-today {
+  background-color: #ffffff;
+}
+.home-gem-events-inner ul.ecs-event-list .cal-icon.cal-icon-today div.cal-day,
+.home-gem-events-inner ul.ecs-event-list .cal-icon.cal-icon-today div.cal-weekday {
+  color: #d00;
+}
+.home-gem-events-inner ul.ecs-event-list .cal-icon.cal-icon-today div.cal-month {
+  background-color: #d00;
 }
 .home-gem-events-inner ul.ecs-event-list .cal-month {
   background-color: #2b5c8f;
@@ -1878,16 +1880,6 @@ ul.wp-block-latest-posts.home-gem-posts li:nth-child(n+4) {
   gap: 20px;
 }
 @media (max-width: 875px) {
-  .home-gem-services-inner > div.wp-block-group__inner-container.is-layout-constrained.wp-block-group-is-layout-constrained {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .home-gem-services-inner > div.wp-block-group__inner-container.is-layout-constrained.wp-block-group-is-layout-constrained {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media screen and (max-width: 768px) and (orientation: landscape) {
   .home-gem-services-inner > div.wp-block-group__inner-container.is-layout-constrained.wp-block-group-is-layout-constrained {
     grid-template-columns: repeat(2, 1fr);
   }

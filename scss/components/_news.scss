@@ -47,3 +47,37 @@ div.card-body {
         display: block;
     }
 }
+
+/*
+CSS to cater for removing featured images and bad excerpts
+
+- from a single post page
+- from the news / blog landing page
+*/
+.post-template-default,
+.blog,
+.archive.category {
+    article {
+        margin-bottom: 1rem !important;
+        padding-bottom: 0px !important;
+
+        header.entry-header {
+            h2 {
+                border-bottom: 0px !important;
+                margin-bottom: 0px !important;
+            }
+
+            div.entry-meta {
+                padding: 0px !important;
+                margin: 1rem 0px !important;
+            }
+
+            div.post-thumbnail,
+            a {
+                img {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

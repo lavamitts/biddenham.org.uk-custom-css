@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "./variables" as v;
 
 /* Hide the telephone number */
 div.top-bar {
@@ -42,4 +43,10 @@ $i: $start;
     }
 
     $i: $i + $step;
+}
+
+.mobile-hide {
+    @media (max-width: v.$mobile-breakpoint2) {
+        display: none;
+    }
 }

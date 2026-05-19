@@ -126,13 +126,11 @@ body.page-id-8836 {
     }
 
     ul {
-        // margin-left: 1rem !important;
         margin-left: 0 !important;
         list-style: none !important;
     }
 
     li {
-        // padding-left: 1.5em; // This indents the text to clear the marker
         padding-left: 1; // This indents the text to clear the marker
         margin-left: 0 !important;
 
@@ -290,23 +288,13 @@ p.welcome-paragraph {
     flex-grow: 1;
 }
 
-.home-services {
+.xhome-services {
     h2 {
         color: v.$dark-blue;
-    }
-    .bin-collection {
-        background-color: #fff;
-        border: 0;
-
-        h2 {
-            color: #333;
-            margin-bottom: 1rem;
-        }
     }
 
     @media (max-width: v.$mobile-breakpoint2) and (min-width: v.$lower-snap-breakpoint) {
         .wp-block-columns {
-            // background-color: red;
             gap: 1em;
             flex-wrap: nowrap !important;
             flex-basis: unset !important;
@@ -315,61 +303,21 @@ p.welcome-paragraph {
             align-items: center !important;
 
             .wp-block-column:nth-of-type(1) {
-                // background-color: black;
                 flex-basis: 25% !important;
                 align-items: center;
             }
             .wp-block-column:nth-of-type(2) {
-                // background-color: blueviolet;
                 flex-basis: 25% !important;
             }
             .wp-block-column:nth-of-type(3) {
                 background-color: antiquewhite;
                 flex-basis: 50% !important;
             }
-
-            .bin-collection {
-                vertical-align: top;
-
-                .bin-results {
-                    align-items: start;
-                }
-
-                h2 {
-                    font-size: 16px;
-                    display: none;
-                }
-                #next-event {
-                    font-size: 14px;
-                    line-height: 1.2rem;
-                }
-            }
         }
     }
     @media (max-width: v.$lower-snap-breakpoint) {
         h2 {
             text-align: center;
-        }
-        div.bin-collection {
-            margin-left: auto;
-            margin-right: auto;
-
-            div.bin-results {
-                margin-left: auto;
-                margin-right: auto;
-                display: block;
-                text-align: center;
-                width: 100%;
-
-                img#bin-image {
-                    float: none;
-                    margin-left: auto !important;
-                    margin-right: auto !important;
-                }
-                div#next-event {
-                    float: none;
-                }
-            }
         }
     }
     @media (max-width: v.$mobile-breakpoint2) {

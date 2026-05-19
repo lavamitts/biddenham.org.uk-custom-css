@@ -140,9 +140,16 @@ ul.wp-block-latest-posts.home-gem-posts {
         flex-shrink: 0; /* Prevents the icon from squishing */
     }
 
-    @media (max-width: 767px) {
-        ul.ecs-event-list .cal-iconx {
-            display: none;
+    $today-color: #d00;
+
+    ul.ecs-event-list .cal-icon.cal-icon-today {
+        background-color: #ffffff;
+        div.cal-day,
+        div.cal-weekday {
+            color: $today-color;
+        }
+        div.cal-month {
+            background-color: $today-color;
         }
     }
 
@@ -236,10 +243,6 @@ ul.wp-block-latest-posts.home-gem-posts {
     width: 100% !important;
 
     figure {
-        // border-radius: 10px;
-        // width: 100% !important;
-        // max-width: 100% !important;
-
         img {
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
@@ -279,19 +282,12 @@ ul.wp-block-latest-posts.home-gem-posts {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 768px) {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    @media screen and (max-width: 768px) and (orientation: landscape) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .home-service-group {
         background-color: white;
         border-radius: 10px;
 
         figure {
+            // background-color: antiquewhite;
             width: 100% !important;
             margin-left: auto;
             margin-right: auto;
