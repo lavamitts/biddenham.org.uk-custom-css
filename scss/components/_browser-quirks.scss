@@ -1,0 +1,28 @@
+html {
+    /* Stop iOS from inflating text sizes on orientation change */
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+
+    /* Force the layout to respect the iPhone notch bounds */
+    padding-left: env(safe-area-inset-left) !important;
+    padding-right: env(safe-area-inset-right) !important;
+}
+
+/* Target mobile landscape dimensions specifically */
+@media screen and (max-width: 850px) and (max-height: 450px) and (orientation: landscape) {
+    /* Clamp the outermost document elements from spilling */
+    html,
+    body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Force the main theme wrapper to respect the true visible screen width */
+    #page {
+        width: 100% !important;
+        max-width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right)) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
+}

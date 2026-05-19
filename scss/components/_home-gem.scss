@@ -1,0 +1,314 @@
+@use "./variables" as v;
+
+/* Apply this to the Group block via the 'fluid-colour-stripe' class */
+.full-width-stripe {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+
+    .home-gem-inner {
+        max-width: 1150px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: 1200px) {
+            max-width: 930px;
+        }
+
+        @media (max-width: 960px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        h2 {
+            color: black !important;
+        }
+    }
+}
+
+/* POSTS */
+/* Base grid setup for desktop: 3 columns, 2 rows */
+ul.wp-block-latest-posts.home-gem-posts,
+ul.ecs-event-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        margin: 0 !important;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        a.wp-block-latest-posts__post-title {
+            font-weight: bold;
+        }
+
+        a,
+        time,
+        p,
+        span {
+            color: #333 !important;
+        }
+
+        .wp-block-latest-posts__featured-image {
+            width: 100% !important;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+ul.wp-block-latest-posts.home-gem-posts {
+    // Mobile responsive setup: 2 columns, 3 rows
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+ul.ecs-event-list {
+    // Mobile responsive setup: 2 columns, 3 rows
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+ul.wp-block-latest-posts.home-gem-posts {
+    li:nth-child(n + 4) {
+        background-color: v.$dark-blue-tint-10;
+        border-radius: 10px;
+        padding: 0.5rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    ul.wp-block-latest-posts.home-gem-posts {
+        li:nth-child(n + 3) {
+            background-color: v.$dark-blue-tint-10;
+            border-radius: 10px;
+            padding: 0.5rem !important;
+
+            .featured-image-link,
+            .wp-block-latest-posts__featured-image,
+            figure,
+            img {
+                display: none !important;
+            }
+        }
+    }
+}
+
+.see-all-news-events {
+    color: white !important;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* EVENTS */
+
+.home-gem-events-inner {
+    // /* Container Layout - Forced Side-by-Side */
+    ul.ecs-event-list li.ecs-event {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 15px !important;
+        margin-bottom: 20px;
+        list-style: none;
+        font-family: sans-serif;
+        width: 100%;
+    }
+
+    // /* Calendar Icon Wrapper */
+    ul.ecs-event-list .cal-icon {
+        width: 65px;
+        background-color: #e6e6e6;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        flex-shrink: 0; /* Prevents the icon from squishing */
+    }
+
+    @media (max-width: 767px) {
+        ul.ecs-event-list .cal-iconx {
+            display: none;
+        }
+    }
+
+    // /* Calendar Month Header */
+    ul.ecs-event-list .cal-month {
+        background-color: #2b5c8f;
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 3px 0;
+        letter-spacing: 1px;
+    }
+
+    // /* Calendar Day Number */
+    ul.ecs-event-list .cal-day {
+        color: #111111;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.1;
+        padding-top: 4px;
+    }
+
+    // /* Calendar Day of Week Footer */
+    ul.ecs-event-list .cal-weekday {
+        color: #555555;
+        font-size: 10px;
+        font-weight: bold;
+        padding-bottom: 5px;
+        letter-spacing: 0.5px;
+    }
+
+    // /* Event Text Column Layout - Forced to fill space */
+    ul.ecs-event-list .event-content-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        flex-grow: 1; /* Tells the text wrapper to take up the rest of the row */
+    }
+
+    // /* Title adjustments */
+    ul.ecs-event-list .event-content-wrapper h4.entry-title {
+        margin: 0 0 4px 0 !important;
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    ul.ecs-event-list .event-content-wrapper h4.entry-title a {
+        color: #2b5c8f;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    ul.ecs-event-list .event-content-wrapper h4.entry-title a:hover {
+        text-decoration: underline;
+    }
+
+    // /* Meta Data Adjustments (Time & Venue) */
+    ul.ecs-event-list .event-content-wrapper span.duration {
+        display: block;
+        font-size: 13px;
+        color: #333333;
+        margin-top: 2px;
+    }
+}
+
+/* ===================================================== */
+/*             CLUBS AND SOCIETIES START HERE            */
+/* ===================================================== */
+
+.home-gem-clubs-inner > .wp-block-group__inner-container.is-layout-constrained.wp-block-group-is-layout-constrained {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+
+    // Large mobile responsive setup: 2 column
+    @media (max-width: v.$mobile-breakpoint2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // Mobile responsive setup: 1 column
+    @media (max-width: v.$cover-breakpoint) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.custom-card-gem {
+    border-radius: 10px;
+    background-color: white;
+    width: 100% !important;
+
+    figure {
+        // border-radius: 10px;
+        // width: 100% !important;
+        // max-width: 100% !important;
+
+        img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            aspect-ratio: 320 / 240 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            object-fit: cover; /* Ensures the image covers the container without distorting */
+            object-position: center center; /* Keeps the focus on the exact middle */
+        }
+    }
+
+    @media (max-width: 875px) {
+        figure {
+            img {
+                // width: 320px;
+                height: 160px; /* Reduces the height, trimming 40px from the top and 40px from the bottom */
+            }
+        }
+    }
+
+    h3,
+    p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+/* SERVICES */
+
+.home-gem-services-inner
+    > div.wp-block-group__inner-container.is-layout-constrained.wp-block-group-is-layout-constrained {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: 875px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-service-group {
+        background-color: white;
+        border-radius: 10px;
+
+        figure {
+            width: 100% !important;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+
+            img {
+                width: 100% !important;
+                border-top-left-radius: 10px !important;
+                border-top-right-radius: 10px !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        p {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+}

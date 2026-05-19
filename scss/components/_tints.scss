@@ -1,0 +1,7 @@
+@use "./variables" as v;
+
+@each $n, $color in v.$dark-blue-tints {
+    div.blue-#{$n} {
+        background-color: $color;
+    }
+}

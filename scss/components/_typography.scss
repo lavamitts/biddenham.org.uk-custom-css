@@ -32,6 +32,13 @@ article.page {
         }
     }
 
+    // Prevent the link text from separating from the icon at the end of a line
+    a[rel*="noopener"]:not(:has(img)),
+    a[target="_blank"]:not(:has(img)),
+    a[onclick]:not(:has(img)) {
+        white-space: nowrap;
+    }
+
     // Add in opens new window icon, excluding links containing images
     a[rel*="noopener"]:not(:has(img))::after,
     a[target="_blank"]:not(:has(img))::after,

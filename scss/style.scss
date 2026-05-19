@@ -1,3 +1,4 @@
+@use "components/browser-quirks";
 @use "components/layouts";
 @use "components/imagery";
 @use "components/galleries";
@@ -19,6 +20,7 @@
 @use "components/custom-card";
 @use "components/full-width-breakout";
 @use "components/home";
+@use "components/home-gem";
 @use "components/breakpoints";
 @use "components/features";
 @use "components/otd";
@@ -27,3 +29,4 @@
 @use "components/church-barn";
 @use "components/cover";
 @use "components/golf";
+@use "components/tints";

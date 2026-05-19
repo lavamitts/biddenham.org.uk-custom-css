@@ -1,8 +1,6 @@
 // Colours
 $dark-grey: #333333;
 $dark-blue: #2868a8;
-$dark-blue-tint-10: #eaf0f6;
-$dark-blue-tint-50: #93b3d3;
 $rich-blue: #00b3e3;
 $silver: #f7f7f7;
 $terrarial: #dbd6b6;
@@ -25,3 +23,25 @@ $page-tennis: ".page-id-919";
 $page-pond: ".page-id-750";
 $page-picturehouse1: ".page-id-4624";
 $page-picturehouse2: ".page-id-7637";
+
+$dark-blue-tint-10: #e9f0f6;
+$dark-blue-tint-20: #d4e1ee;
+$dark-blue-tint-30: #bed1e5;
+$dark-blue-tint-40: #a9c3dc;
+$dark-blue-tint-50: #93b3d3;
+
+// Define the tints as a Sass Map
+// _variables.scss
+
+$dark-blue-tints: (
+    10: #e9f0f6,
+    20: #d4e1ee,
+    30: #bed1e5,
+    40: #a9c3dc,
+    50: #93b3d3
+);
+
+// Add a helper function to easily grab the tints in other files
+@function get-blue($tint) {
+    @return map-get($dark-blue-tints, $tint);
+}
